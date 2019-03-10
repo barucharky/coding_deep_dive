@@ -52,12 +52,20 @@ step_5 as
 select   *,
          substr(lower(reverse(times_no_pre)), 1, 1) times_reverse_char_1
 from     step_4
-)
+),
 
+step_6 as
+(
 select   *,
          -- --------------------------------------
          case when safe_cast(times_reverse_char_1 as int64) is null
              then substr(times_no_pre,1,strpos(times_no_pre, ' '))
-             else ''
-         end time_suffix
+             else times_no_pre
+         end times_alone
 from     step_5
+)
+
+select *,
+       -- --------------------------------------
+       replace(times_no_pre, times_alone, '') time_suffix
+from   step_6
