@@ -6,6 +6,10 @@
 
 #### This is the smallest one
 
+##### Probably not that useful
+
+###### This either
+
 This is the normal text. Just normal as heck. Here's a list:
 - Baruch
    - car
@@ -40,7 +44,7 @@ order by col_2
 
 Here's an image
 
-![bam](Screenshot.png)
+![bam](images/Screenshot.png)
 
 ---
 
@@ -48,7 +52,19 @@ Here's an image
 
 [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-| Name  | City  | Dob |
-|---|---|---|
-| Baruch  | Boston  | 4-21-1984 |
-| Sruli | Miami | 5-20-1984 |
+| Shmoink | Name  | City  | Dob |
+|---|---|---|---|
+| Y | Baruch  | Boston  | 4-21-1984 |
+| N | Sruli | Miami | 7-20-1984 |
+
+Multiline editing: `CTRL+SHIFT+L`
+
+
+1. `alsdkfjlkdj` 
+    - alsdkjf
+2. `woeinfi` 
+    - vowieeb
+3. `aslnvidn` 
+    - dlfjaslfj
+4. `sdfkj` 
+    - dlkjfal
