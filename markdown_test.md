@@ -47,3 +47,8 @@ Here's an image
 [My Github Repository](https://github.com/barucharky/coding_deep_dive)
 
 [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+| Name  | City  | Dob |
+|---|---|---|
+| Baruch  | Boston  | 4-21-1984 |
+| Sruli | Miami | 5-20-1984 |
