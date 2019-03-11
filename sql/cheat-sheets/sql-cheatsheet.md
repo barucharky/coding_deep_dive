@@ -4,6 +4,8 @@
 
 ---
 
+## Editing strings
+
 ## `substr`
 
 ```sql
@@ -13,6 +15,28 @@ substr(
        ending_dash_position  -- parameter 3: how many charachters to go for 
       )
 ```
+
+## `strpos`
+
+```sql
+strpos(
+       field_name,   -- parameter 1: string we're searching in
+       'abc'        -- find the position of these characters
+)
+```
+
+## `replace`
+- replace characters within a string
+
+```sql
+replace(
+        field_name,   -- string we're working with
+        'abc',        -- characters to replace
+        'xyz'         -- characters to replace with
+)
+```
+
+---
 
 ## `case`
 - Acts as an `IF` statement
