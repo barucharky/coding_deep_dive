@@ -35,18 +35,3 @@ select   time_zone,
              -- last param not needed  -- parameter 3: how many charachters to go for 
          ) time_zone_clean_new
 from     step_2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
