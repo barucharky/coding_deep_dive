@@ -1,7 +1,6 @@
 with step_1 as
 (
-select   *,
-         field_6,
+select   field_6,
          replace
              (
               replace(field_6,' - ','-'),
