@@ -1,6 +1,7 @@
 with step_1 as
 (
-select   field_6,
+select   *,
+         field_6,
          replace
              (
               replace(field_6,' - ','-'),
@@ -11,8 +12,7 @@ from    `data-science-course-226116.sql_lessons.stock_exchanges_raw_input`
 
 step_2 as
 (
-select   field_6,
-         no_dash_space,
+select   *,
          -- --------------------------------------
          case when lower(no_dash_space) like 'mon%'
              then 'Y'
@@ -26,9 +26,7 @@ from     step_1
 
 step_3 as
 (
-select   field_6,
-         no_dash_space,
-         times_open_tz,
+select   *,
          -- --------------------------------------
          case when safe_cast(substr(times_open_tz,1,1) as int64) is null
              then substr(lower(times_open_tz),1,strpos(times_open_tz, ' '))
@@ -39,10 +37,7 @@ from     step_2
 
 step_4 as
 (
-select   field_6,
-         no_dash_space,
-         time_prefix,
-         times_open_tz,
+select   *,
          trim(replace(lower(times_open_tz),time_prefix,'')) times_no_pre
 from     step_3
 ),
