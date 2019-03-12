@@ -109,10 +109,8 @@ where    country is 'Mexico'
 |description|type|example|
 |---|---|---|
 |string|string|'Hello World!', '00012'|
-|
 |integer|int64|12|
 |numeric|numeric|123.01, 12.9090|
-|
 |date|date|'2019-03-20'|
 |time|time|'14:02:03'|
 |datetime|datetime|'2019-03-20 14:02:03'|
