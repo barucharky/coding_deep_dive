@@ -15,7 +15,7 @@ having
 order by 
 ```
 
-### Note that the logical order places `select` below `having`, above `order by`
+Note that the logical order places `select` below `having`, above `order by`
 ---
 
 ## Editing strings
