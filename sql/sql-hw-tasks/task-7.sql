@@ -343,8 +343,26 @@ select   *,
               )
          ) step_27_times_part_1_open_with_new_colon
 from     step_26
+),
+
+step_28 as
+(
+select   *,
+         concat(
+              substr(
+                   step_20_times_part_1_close_add_00,
+                   1,
+                   step_24_times_part_1_close_str_pos_colon - 3
+              ),
+              ':',
+              substr(
+                   step_20_times_part_1_close_add_00,
+                   step_24_times_part_1_close_str_pos_colon - 2
+              )
+         ) step_28_times_part_1_close_with_new_colon
+from     step_27
 )
 
 select   *
 
-from     step_27
+from     step_28
