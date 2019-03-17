@@ -144,8 +144,10 @@ select   *,
                 '/'
                ) step_12_str_pos_of_slash
 from     step_11
-)
+),
 
+step_13 as
+(
 select   *,
          case 
               when step_12_str_pos_of_slash > 0
@@ -155,3 +157,19 @@ select   *,
               else step_11_remove_colons
           end step_13_times_part_1
 from     step_12
+),
+
+step_14 as
+(
+select   *,
+         case 
+              when step_12_str_pos_of_slash > 0
+              then substr(step_11_remove_colons,
+                   step_12_str_pos_of_slash + 1)
+          end step_14_times_part_2
+from     step_13
+)
+
+select   *
+
+from     step_14
