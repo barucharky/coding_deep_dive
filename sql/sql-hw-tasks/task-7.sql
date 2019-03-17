@@ -83,11 +83,20 @@ select   *,
                  ''
                  ) step_06_remove_times_prefix
 from     step_05
-)
+),
 
+step_07 as
+(
 select   *,
          replace(step_06_remove_times_prefix, 
                ' - ', 
                '-'
                ) step_07_replace_blank_dash_blank
 from     step_06
+)
+
+select *,
+       strpos(step_07_replace_blank_dash_blank, 
+              ':00 '
+             ) step_08_str_pos_of_colon_zero_zero_blank
+from step_07
