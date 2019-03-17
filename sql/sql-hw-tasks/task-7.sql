@@ -137,8 +137,21 @@ select   *,
 from     step_10
 ),
 
+step_12 as
+(
 select   *,
          strpos(step_11_remove_colons, 
                 '/'
                ) step_12_str_pos_of_slash
 from     step_11
+)
+
+select   *,
+         case 
+              when step_12_str_pos_of_slash > 0
+              then substr(step_11_remove_colons, 
+                   1, 
+                   step_12_str_pos_of_slash - 1)
+              else step_11_remove_colons
+          end step_13_times_part_1
+from     step_12
