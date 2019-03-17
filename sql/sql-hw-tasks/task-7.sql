@@ -52,11 +52,23 @@ step_04 as
 select   *,
          safe_cast(step_03_str_up_to_first_colon as int64) step_04_str_up_to_first_colon_as_int64	
 from     step_03
-)
+),
 
+step_05 as
+(
 select   *,
-         case when safe_cast(substr(step_03_str_up_to_first_colon, 1, 1) as int64) is null
+         case when safe_cast(
+              substr(
+                   step_03_str_up_to_first_colon, 
+                   1, 
+                   1) as int64
+                   ) is null
              then step_03_str_up_to_first_colon
              else ''
          end step_05_times_prefix
 from     step_04
+)
+
+select   *,
+         
+from     step_05
