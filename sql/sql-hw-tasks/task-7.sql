@@ -4,9 +4,10 @@ with step_00 as
 (
 select   distinct field_6,
          -- -----------------------
-         case when lower(field_6) like '%monday - friday%' 
-              then 'Y'
-              else 'N'
+         case 
+             when lower(field_6) like '%monday - friday%' 
+             then 'Y'
+             else 'N'
          end step_00_mon_fri_flag
          -- -----------------------
 from     `data-science-course-226116.sql_lessons.stock_exchanges_raw_input` 
@@ -35,10 +36,12 @@ select   *,
               ) step_02_str_pos_of_colon
 from     step_01
 ),
+
 step_03 as
 (
 select   *,
-         case when step_02_str_pos_of_colon > 0
+         case 
+             when step_02_str_pos_of_colon > 0
              then substr(
                   step_01_remove_mon_fri, 
                   1, 
@@ -59,7 +62,8 @@ from     step_03
 step_05 as
 (
 select   *,
-         case when safe_cast(
+         case 
+             when safe_cast(
               substr(
                    step_03_str_up_to_first_colon, 
                    1, 
@@ -69,11 +73,21 @@ select   *,
              else ''
          end step_05_times_prefix
 from     step_04
-)
+),
 
+step_06 as
+(
 select   *,
          replace(step_01_remove_mon_fri, 
                  concat(step_05_times_prefix, ': '),
                  ''
-                 )
+                 ) step_06_remove_times_prefix
 from     step_05
+)
+
+select   *,
+         replace(step_06_remove_times_prefix, 
+               ' - ', 
+               '-'
+               ) step_07_replace_blank_dash_blank
+from     step_06
