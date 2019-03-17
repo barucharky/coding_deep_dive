@@ -168,8 +168,22 @@ select   *,
                    step_12_str_pos_of_slash + 1)
           end step_14_times_part_2
 from     step_13
+),
+
+step_15 as
+(
+select   *,
+         substr(
+              step_13_times_part_1, 
+              1, strpos(
+                   step_13_times_part_1, 
+                   '-'
+              ) - 1
+              ) step_15_times_part_1_open
+from     step_14
 )
+
 
 select   *
 
-from     step_14
+from     step_15
