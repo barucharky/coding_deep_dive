@@ -397,8 +397,48 @@ select   *,
               )
          ) step_30_times_part_2_close_with_new_colon
 from     step_29
+),
+
+step_31 as
+(
+select   *,
+         safe_cast(
+              step_27_times_part_1_open_with_new_colon
+              as time
+         ) step_31_times_part_1_open_cast_as_time
+from     step_30
+),
+
+step_32 as
+(
+select   *,
+         safe_cast(
+              step_28_times_part_1_close_with_new_colon
+              as time
+         ) step_32_times_part_1_close_cast_as_time
+from     step_31
+),
+
+step_33 as
+(
+select   *,
+         safe_cast(
+              step_29_times_part_2_open_with_new_colon
+              as time
+         ) step_33_times_part_2_open_cast_as_time
+from     step_32
+),
+
+step_34 as
+(
+select   *,
+         safe_cast(
+              step_30_times_part_2_close_with_new_colon
+              as time
+         ) step_34_times_part_2_close_cast_as_time
+from     step_33
 )
 
 select   *
 
-from     step_30
+from     step_34
