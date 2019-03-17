@@ -178,12 +178,25 @@ select   *,
               1, strpos(
                    step_13_times_part_1, 
                    '-'
-              ) - 1
-              ) step_15_times_part_1_open
+                 ) - 1
+          ) step_15_times_part_1_open
 from     step_14
+),
+
+step_16 as
+(
+select   *,
+         substr(
+              step_13_times_part_1,
+              strpos(
+                   step_13_times_part_1,
+                   '-'
+              ) + 1
+         ) step_16_times_part_1_close
+from     step_15
 )
 
 
 select   *
 
-from     step_15
+from     step_16
