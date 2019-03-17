@@ -194,9 +194,26 @@ select   *,
               ) + 1
          ) step_16_times_part_1_close
 from     step_15
+),
+
+step_17 as
+(
+select   *,
+         case 
+              when step_14_times_part_2 is not null
+              then substr(
+                   step_14_times_part_2,
+                   1,
+                   strpos(
+                        step_14_times_part_2, 
+                        '-'
+                   ) - 1
+              )
+          end step_17_times_part_2_open
+from     step_16
 )
 
 
 select   *
 
-from     step_16
+from     step_17
