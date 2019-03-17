@@ -16,8 +16,18 @@ step_01 as
 select   *,
          trim(replace(field_6, 'Monday - Friday:', '')) step_01_remove_mon_fri
 from     step_00
-)
+),
 
+step_02 as
+(
 select   *,
          strpos(step_01_remove_mon_fri,':') step_02_str_pos_of_colon
 from     step_01
+)
+
+select   *,
+         case when step_02_str_pos_of_colon > 0
+             then substr(step_01_remove_mon_fri, 1, step_02_str_pos_of_colon - 1 ) 
+             else ''
+         end step_03_str_up_to_first_colon
+from     step_02
