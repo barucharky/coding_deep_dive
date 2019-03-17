@@ -361,8 +361,44 @@ select   *,
               )
          ) step_28_times_part_1_close_with_new_colon
 from     step_27
+),
+
+step_29 as
+(
+select   *,
+         concat(
+              substr(
+                   step_21_times_part_2_open_add_00,
+                   1,
+                   step_25_times_part_2_open_str_pos_colon - 3
+              ),
+              ':',
+              substr(
+                   step_21_times_part_2_open_add_00,
+                   step_25_times_part_2_open_str_pos_colon - 2
+              )
+         ) step_29_times_part_2_open_with_new_colon
+from     step_28
+),
+
+step_30 as
+(
+select   *,
+         concat(
+              substr(
+                   step_22_times_part_2_close_add_00,
+                   1,
+                   step_26_times_part_2_close_str_pos_colon - 3
+              ),
+              ':',
+              substr(
+                   step_22_times_part_2_close_add_00,
+                   step_26_times_part_2_close_str_pos_colon - 2
+              )
+         ) step_30_times_part_2_close_with_new_colon
+from     step_29
 )
 
 select   *
 
-from     step_28
+from     step_30
