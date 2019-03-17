@@ -130,17 +130,23 @@ from     step_09
 step_11 as
 (
 select   *,
-         replace(step_10_remove_times_suffix, 
-                 ':', 
-                 ''
-                 ) step_11_remove_colons
+         trim
+         (
+              replace
+              (
+                   step_10_remove_times_suffix, 
+                   ':', 
+                   ''
+                 )
+             ) step_11_remove_colons
 from     step_10
 ),
 
 step_12 as
 (
 select   *,
-         strpos(step_11_remove_colons, 
+         strpos(
+                step_11_remove_colons, 
                 '/'
                ) step_12_str_pos_of_slash
 from     step_11
@@ -247,9 +253,35 @@ select   *,
               ':00'
          ) step_20_times_part_1_close_add_00
 from     step_19
+),
+
+step_21 as
+(
+select   *,
+         case
+              when step_17_times_part_2_open is not null
+              then concat(
+                   step_17_times_part_2_open,
+                   ':00'
+              )
+          end step_21_times_part_2_open_add_00
+from     step_20
+),
+
+step_22 as
+(
+select   *,
+         case 
+           when step_18_times_part_2_close is not null
+           then concat(
+                step_18_times_part_2_close,
+                ':00'
+           ) 
+         end step_22_times_part_2_close_add_00
+from     step_21
 )
 
 
 select   *
 
-from     step_20
+from     step_22
