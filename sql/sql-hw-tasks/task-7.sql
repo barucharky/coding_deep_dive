@@ -1,3 +1,5 @@
+-- B''H --
+
 with step_00 as
 (
 select   distinct field_6,
@@ -70,5 +72,8 @@ from     step_04
 )
 
 select   *,
-         
+         replace(step_01_remove_mon_fri, 
+                 concat(step_05_times_prefix, ': '),
+                 ''
+                 )
 from     step_05
