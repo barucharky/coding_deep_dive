@@ -227,9 +227,29 @@ select   *,
               )
           end step_18_times_part_2_close
 from     step_17
+),
+
+step_19 as
+(
+select   *,
+         concat(
+              step_15_times_part_1_open,
+              ':00'
+         ) step_19_times_part_1_open_add_00
+from     step_18
+),
+
+step_20 as
+(
+select   *,
+         concat(
+              step_16_times_part_1_close,
+              ':00'
+         ) step_20_times_part_1_close_add_00
+from     step_19
 )
 
 
 select   *
 
-from     step_18
+from     step_20
