@@ -325,8 +325,26 @@ select   *,
               )
           end step_26_times_part_2_close_str_pos_colon
 from     step_25
+),
+
+step_27 as
+(
+select   *,
+         concat(
+              substr(
+                   step_19_times_part_1_open_add_00,
+                   1,
+                   step_23_times_part_1_open_str_pos_colon - 3
+              ),
+              ':',
+              substr(
+                   step_19_times_part_1_open_add_00,
+                   step_23_times_part_1_open_str_pos_colon - 2
+              )
+         ) step_27_times_part_1_open_with_new_colon
+from     step_26
 )
 
 select   *
 
-from     step_26
+from     step_27
