@@ -102,8 +102,10 @@ select *,
               ':00 '
              ) step_08_str_pos_of_colon_zero_zero_blank
 from step_07
-)
+),
 
+step_09 as
+(
 select   *,
          case 
               when step_08_str_pos_of_colon_zero_zero_blank > 0
@@ -113,3 +115,11 @@ select   *,
               else ''
           end step_09_times_suffix
 from     step_08
+)
+
+select   *,
+         replace(step_07_replace_blank_dash_blank, 
+                 step_09_times_suffix, 
+                 ''
+                 ) step_10_remove_times_suffix
+from     step_09
