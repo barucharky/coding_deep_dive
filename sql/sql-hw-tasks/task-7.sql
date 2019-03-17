@@ -279,9 +279,54 @@ select   *,
            ) 
          end step_22_times_part_2_close_add_00
 from     step_21
-)
+),
 
+step_23 as
+(
+select   *,
+         strpos(
+              step_19_times_part_1_open_add_00,
+              ':'
+         ) step_23_times_part_1_open_str_pos_colon
+from     step_22
+),
+
+step_24 as
+(
+select   *,
+         strpos(
+              step_20_times_part_1_close_add_00,
+              ':'
+         ) step_24_times_part_1_close_str_pos_colon
+from     step_23
+),
+
+step_25 as
+(
+select   *,
+         case
+              when step_21_times_part_2_open_add_00 is not null
+              then strpos(
+                   step_21_times_part_2_open_add_00,
+                   ':'
+              ) 
+          end step_25_times_part_2_open_str_pos_colon
+from     step_24
+),
+
+step_26 as
+(
+select   *,
+         case
+              when step_22_times_part_2_close_add_00 is not null
+              then strpos(
+                   step_22_times_part_2_close_add_00,
+                   ':'
+              )
+          end step_26_times_part_2_close_str_pos_colon
+from     step_25
+)
 
 select   *
 
-from     step_22
+from     step_26
