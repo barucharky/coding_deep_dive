@@ -55,8 +55,8 @@ from     step_03
 )
 
 select   *,
-         case when safe_cast(substr(step_01_remove_mon_fri, 1, 1) as int64) is null
-             then substr(step_01_remove_mon_fri, 1, step_04_str_up_to_first_colon_as_int64)
+         case when safe_cast(substr(step_03_str_up_to_first_colon, 1, 1) as int64) is null
+             then step_03_str_up_to_first_colon
              else ''
          end step_05_times_prefix
 from     step_04
