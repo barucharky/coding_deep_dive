@@ -93,10 +93,23 @@ select   *,
                '-'
                ) step_07_replace_blank_dash_blank
 from     step_06
-)
+),
 
+step_08 as
+(
 select *,
        strpos(step_07_replace_blank_dash_blank, 
               ':00 '
              ) step_08_str_pos_of_colon_zero_zero_blank
 from step_07
+)
+
+select   *,
+         case 
+              when step_08_str_pos_of_colon_zero_zero_blank > 0
+              then substr(
+                   step_07_replace_blank_dash_blank, 
+                   step_08_str_pos_of_colon_zero_zero_blank + 4)
+              else ''
+          end step_09_times_suffix
+from     step_08
