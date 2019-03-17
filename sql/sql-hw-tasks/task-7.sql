@@ -115,11 +115,21 @@ select   *,
               else ''
           end step_09_times_suffix
 from     step_08
-)
+),
 
+step_10 as
+(
 select   *,
          replace(step_07_replace_blank_dash_blank, 
                  step_09_times_suffix, 
                  ''
                  ) step_10_remove_times_suffix
 from     step_09
+)
+
+select   *,
+         replace(step_10_remove_times_suffix, 
+                 ':', 
+                 ''
+                 ) step_11_remove_colons
+from     step_10
