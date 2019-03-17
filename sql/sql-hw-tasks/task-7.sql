@@ -14,26 +14,49 @@ order by 1
 step_01 as
 (
 select   *,
-         trim(replace(field_6, 'Monday - Friday:', '')) step_01_remove_mon_fri
+         trim(
+              replace(
+                   field_6, 
+                   'Monday - Friday:', 
+                   ''
+                   )
+             ) step_01_remove_mon_fri
 from     step_00
 ),
 
 step_02 as
 (
 select   *,
-         strpos(step_01_remove_mon_fri,':') step_02_str_pos_of_colon
+         strpos(
+              step_01_remove_mon_fri, 
+              ':'
+              ) step_02_str_pos_of_colon
 from     step_01
 ),
-step_3 as
+step_03 as
 (
 select   *,
          case when step_02_str_pos_of_colon > 0
-             then substr(step_01_remove_mon_fri, 1, step_02_str_pos_of_colon - 1 ) 
+             then substr(
+                  step_01_remove_mon_fri, 
+                  1, 
+                  step_02_str_pos_of_colon - 1 
+                  ) 
              else ''
          end step_03_str_up_to_first_colon
 from     step_02
+),
+
+step_04 as
+(
+select   *,
+         safe_cast(step_03_str_up_to_first_colon as int64) step_04_str_up_to_first_colon_as_int64	
+from     step_03
 )
 
 select   *,
-         safe_cast(step_03_str_up_to_first_colon as int64) step_04_str_up_to_first_colon_as_int64
-from     step_3
+         case when safe_cast(substr(step_01_remove_mon_fri, 1, 1) as int64) is null
+             then substr(step_01_remove_mon_fri, 1, step_04_str_up_to_first_colon_as_int64)
+             else ''
+         end step_05_times_prefix
+from     step_04
