@@ -125,11 +125,20 @@ select   *,
                  ''
                  ) step_10_remove_times_suffix
 from     step_09
-)
+),
 
+step_11 as
+(
 select   *,
          replace(step_10_remove_times_suffix, 
                  ':', 
                  ''
                  ) step_11_remove_colons
 from     step_10
+),
+
+select   *,
+         strpos(step_11_remove_colons, 
+                '/'
+               ) step_12_str_pos_of_slash
+from     step_11
