@@ -17,13 +17,12 @@ order by 1
 step_01 as
 (
 select   *,
-         trim(
-              replace(
-                   field_6, 
-                   'Monday - Friday:', 
-                   ''
-                   )
-             ) step_01_remove_mon_fri
+         replace(
+                field_6, 
+                'Monday - Friday: ', 
+                ''
+                )
+         step_01_remove_mon_fri
 from     step_00
 ),
 
@@ -47,7 +46,7 @@ select   *,
                   1, 
                   step_02_str_pos_of_colon - 1 
                   ) 
-             else ''
+             else null                              -- changed from '' to null
          end step_03_str_up_to_first_colon
 from     step_02
 ),
@@ -64,13 +63,10 @@ step_05 as
 select   *,
          case 
              when safe_cast(
-              substr(
-                   step_03_str_up_to_first_colon, 
-                   1, 
-                   1) as int64
+                   step_03_str_up_to_first_colon as int64
                    ) is null
              then step_03_str_up_to_first_colon
-             else ''
+             else null
          end step_05_times_prefix
 from     step_04
 ),
@@ -78,9 +74,9 @@ from     step_04
 step_06 as
 (
 select   *,
-         replace(step_01_remove_mon_fri, 
-                 concat(step_05_times_prefix, ': '),
-                 ''
+         replace(step_01_remove_mon_fri,              -- Sruli put a case statement here, testing if `step_01_remove_mon_fri` is null
+                 concat(step_05_times_prefix, ': '),  -- I don't understand why he did because the replace statement doesn't return an error if it's null
+                 ''                                   -- he also put all this in trim, but don't think I had extra spaces here
                  ) step_06_remove_times_prefix
 from     step_05
 ),
@@ -88,7 +84,7 @@ from     step_05
 step_07 as
 (
 select   *,
-         replace(step_06_remove_times_prefix, 
+         replace(step_06_remove_times_prefix,         -- here also I don't know why he used trim
                ' - ', 
                '-'
                ) step_07_replace_blank_dash_blank
@@ -112,7 +108,7 @@ select   *,
               then substr(
                    step_07_replace_blank_dash_blank, 
                    step_08_str_pos_of_colon_zero_zero_blank + 4)
-              else ''
+              else null
           end step_09_times_suffix
 from     step_08
 ),
@@ -120,24 +116,22 @@ from     step_08
 step_10 as
 (
 select   *,
-         replace(step_07_replace_blank_dash_blank, 
+         replace(step_07_replace_blank_dash_blank,         -- here, too, I don't know why a case statement would be needed or trim
                  step_09_times_suffix, 
                  ''
-                 ) step_10_remove_times_suffix
+                ) step_10_remove_times_suffix
 from     step_09
 ),
 
 step_11 as
 (
 select   *,
-         trim
-         (
-              replace
-              (
+         trim(
+              replace(
                    step_10_remove_times_suffix, 
                    ':', 
                    ''
-                 )
+                     )
              ) step_11_remove_colons
 from     step_10
 ),
