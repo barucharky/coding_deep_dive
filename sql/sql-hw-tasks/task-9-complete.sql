@@ -1,3 +1,5 @@
+-- B''H --
+
 select   concat(account, ' - ', campaign) account_campaign,
          sum(cost) / sum(impressions) cost_per_impression,
          max(cost) max_cost

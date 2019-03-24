@@ -1,3 +1,5 @@
+-- B''H --
+
 select   account,
          avg(cost) avg_cost_per_account,
          sum(cost) sum_cost_per_account
