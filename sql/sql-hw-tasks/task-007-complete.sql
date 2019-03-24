@@ -30,9 +30,9 @@ step_02 as
 (
 select   *,
          strpos(
-              step_01_remove_mon_fri, 
-              ':'
-              ) step_02_str_pos_of_colon
+                step_01_remove_mon_fri, 
+                ':'
+               ) step_02_str_pos_of_colon
 from     step_01
 ),
 
@@ -75,9 +75,9 @@ step_06 as
 (
 select   *,
          replace(step_01_remove_mon_fri,              -- Sruli put a case statement here, testing if `step_01_remove_mon_fri` is null
-                 concat(step_05_times_prefix, ': '),  -- I don't understand why he did because the replace statement doesn't return an error if it's null
+                 concat(step_05_times_prefix, ': '),  -- It's safer and could prevent errors
                  ''                                   -- he also put all this in trim, but don't think I had extra spaces here
-                 ) step_06_remove_times_prefix
+                ) step_06_remove_times_prefix
 from     step_05
 ),
 
@@ -85,9 +85,9 @@ step_07 as
 (
 select   *,
          replace(step_06_remove_times_prefix,         -- here also I don't know why he used trim
-               ' - ', 
-               '-'
-               ) step_07_replace_blank_dash_blank
+                 ' - ', 
+                 '-'
+                ) step_07_replace_blank_dash_blank
 from     step_06
 ),
 
@@ -128,9 +128,9 @@ step_11 as
 select   *,
          trim(
               replace(
-                   step_10_remove_times_suffix, 
-                   ':', 
-                   ''
+                      step_10_remove_times_suffix, 
+                      ':', 
+                      ''
                      )
              ) step_11_remove_colons
 from     step_10
@@ -174,12 +174,12 @@ step_15 as
 (
 select   *,
          substr(
-              step_13_times_part_1, 
-              1, strpos(
-                   step_13_times_part_1, 
-                   '-'
-                 ) - 1
-          ) step_15_times_part_1_open
+                step_13_times_part_1, 
+                1, strpos(
+                          step_13_times_part_1, 
+                          '-'
+                         ) - 1
+               ) step_15_times_part_1_open
 from     step_14
 ),
 
@@ -189,10 +189,10 @@ select   *,
          substr(
               step_13_times_part_1,
               strpos(
-                   step_13_times_part_1,
-                   '-'
-              ) + 1
-         ) step_16_times_part_1_close
+                     step_13_times_part_1,
+                     '-'
+                    ) + 1
+               ) step_16_times_part_1_close
 from     step_15
 ),
 
@@ -202,13 +202,13 @@ select   *,
          case 
               when step_14_times_part_2 is not null
               then substr(
-                   step_14_times_part_2,
-                   1,
-                   strpos(
-                        step_14_times_part_2, 
-                        '-'
-                   ) - 1
-              )
+                          step_14_times_part_2,
+                          1,
+                          strpos(
+                                 step_14_times_part_2, 
+                                 '-'
+                                ) - 1
+                         )
           end step_17_times_part_2_open
 from     step_16
 ),
@@ -219,12 +219,12 @@ select   *,
          case 
               when step_14_times_part_2 is not null
               then substr(
-                   step_14_times_part_2,
-                   strpos(
-                        step_14_times_part_2,
-                        '-'
-                   ) + 1
-              )
+                          step_14_times_part_2,
+                          strpos(
+                                 step_14_times_part_2,
+                                 '-'
+                                ) + 1
+                         )
           end step_18_times_part_2_close
 from     step_17
 ),
@@ -233,9 +233,9 @@ step_19 as
 (
 select   *,
          concat(
-              step_15_times_part_1_open,
-              ':00'
-         ) step_19_times_part_1_open_add_00
+                step_15_times_part_1_open,
+                ':00'
+               ) step_19_times_part_1_open_add_00
 from     step_18
 ),
 
@@ -243,9 +243,9 @@ step_20 as
 (
 select   *,
          concat(
-              step_16_times_part_1_close,
-              ':00'
-         ) step_20_times_part_1_close_add_00
+               step_16_times_part_1_close,
+               ':00'
+               ) step_20_times_part_1_close_add_00
 from     step_19
 ),
 
@@ -255,9 +255,9 @@ select   *,
          case
               when step_17_times_part_2_open is not null
               then concat(
-                   step_17_times_part_2_open,
-                   ':00'
-              )
+                          step_17_times_part_2_open,
+                          ':00'
+                         )
           end step_21_times_part_2_open_add_00
 from     step_20
 ),
@@ -268,9 +268,9 @@ select   *,
          case 
            when step_18_times_part_2_close is not null
            then concat(
-                step_18_times_part_2_close,
-                ':00'
-           ) 
+                       step_18_times_part_2_close,
+                       ':00'
+                      ) 
          end step_22_times_part_2_close_add_00
 from     step_21
 ),
@@ -279,9 +279,9 @@ step_23 as
 (
 select   *,
          strpos(
-              step_19_times_part_1_open_add_00,
-              ':'
-         ) step_23_times_part_1_open_str_pos_colon
+                step_19_times_part_1_open_add_00,
+                ':'
+               ) step_23_times_part_1_open_str_pos_colon
 from     step_22
 ),
 
@@ -289,9 +289,9 @@ step_24 as
 (
 select   *,
          strpos(
-              step_20_times_part_1_close_add_00,
-              ':'
-         ) step_24_times_part_1_close_str_pos_colon
+                step_20_times_part_1_close_add_00,
+                ':'
+               ) step_24_times_part_1_close_str_pos_colon
 from     step_23
 ),
 
@@ -301,10 +301,10 @@ select   *,
          case
               when step_21_times_part_2_open_add_00 is not null
               then strpos(
-                   step_21_times_part_2_open_add_00,
-                   ':'
-              ) 
-          end step_25_times_part_2_open_str_pos_colon
+                          step_21_times_part_2_open_add_00,
+                          ':'
+                         ) 
+         end step_25_times_part_2_open_str_pos_colon
 from     step_24
 ),
 
@@ -314,10 +314,10 @@ select   *,
          case
               when step_22_times_part_2_close_add_00 is not null
               then strpos(
-                   step_22_times_part_2_close_add_00,
-                   ':'
-              )
-          end step_26_times_part_2_close_str_pos_colon
+                          step_22_times_part_2_close_add_00,
+                          ':'
+                         )
+         end step_26_times_part_2_close_str_pos_colon
 from     step_25
 ),
 
@@ -326,16 +326,16 @@ step_27 as
 select   *,
          concat(
               substr(
-                   step_19_times_part_1_open_add_00,
-                   1,
-                   step_23_times_part_1_open_str_pos_colon - 3
-              ),
+                     step_19_times_part_1_open_add_00,
+                     1,
+                     step_23_times_part_1_open_str_pos_colon - 3
+                    ),
               ':',
               substr(
-                   step_19_times_part_1_open_add_00,
-                   step_23_times_part_1_open_str_pos_colon - 2
-              )
-         ) step_27_times_part_1_open_with_new_colon
+                     step_19_times_part_1_open_add_00,
+                     step_23_times_part_1_open_str_pos_colon - 2
+                    )
+               ) step_27_times_part_1_open_with_new_colon
 from     step_26
 ),
 
@@ -344,16 +344,16 @@ step_28 as
 select   *,
          concat(
               substr(
-                   step_20_times_part_1_close_add_00,
-                   1,
-                   step_24_times_part_1_close_str_pos_colon - 3
-              ),
+                     step_20_times_part_1_close_add_00,
+                     1,
+                     step_24_times_part_1_close_str_pos_colon - 3
+                    ),
               ':',
               substr(
-                   step_20_times_part_1_close_add_00,
-                   step_24_times_part_1_close_str_pos_colon - 2
-              )
-         ) step_28_times_part_1_close_with_new_colon
+                     step_20_times_part_1_close_add_00,
+                     step_24_times_part_1_close_str_pos_colon - 2
+                    )
+               ) step_28_times_part_1_close_with_new_colon
 from     step_27
 ),
 
@@ -362,16 +362,16 @@ step_29 as
 select   *,
          concat(
               substr(
-                   step_21_times_part_2_open_add_00,
-                   1,
-                   step_25_times_part_2_open_str_pos_colon - 3
-              ),
+                     step_21_times_part_2_open_add_00,
+                     1,
+                     step_25_times_part_2_open_str_pos_colon - 3
+                    ),
               ':',
               substr(
-                   step_21_times_part_2_open_add_00,
-                   step_25_times_part_2_open_str_pos_colon - 2
-              )
-         ) step_29_times_part_2_open_with_new_colon
+                     step_21_times_part_2_open_add_00,
+                     step_25_times_part_2_open_str_pos_colon - 2
+                    )
+               ) step_29_times_part_2_open_with_new_colon
 from     step_28
 ),
 
@@ -380,16 +380,16 @@ step_30 as
 select   *,
          concat(
               substr(
-                   step_22_times_part_2_close_add_00,
-                   1,
-                   step_26_times_part_2_close_str_pos_colon - 3
-              ),
+                     step_22_times_part_2_close_add_00,
+                     1,
+                     step_26_times_part_2_close_str_pos_colon - 3
+                    ),
               ':',
               substr(
-                   step_22_times_part_2_close_add_00,
-                   step_26_times_part_2_close_str_pos_colon - 2
-              )
-         ) step_30_times_part_2_close_with_new_colon
+                     step_22_times_part_2_close_add_00,
+                     step_26_times_part_2_close_str_pos_colon - 2
+                    )
+               ) step_30_times_part_2_close_with_new_colon
 from     step_29
 ),
 
@@ -397,9 +397,9 @@ step_31 as
 (
 select   *,
          safe_cast(
-              step_27_times_part_1_open_with_new_colon
-              as time
-         ) step_31_times_part_1_open_cast_as_time
+                   step_27_times_part_1_open_with_new_colon
+                   as time
+                  ) step_31_times_part_1_open_cast_as_time
 from     step_30
 ),
 
@@ -407,9 +407,9 @@ step_32 as
 (
 select   *,
          safe_cast(
-              step_28_times_part_1_close_with_new_colon
-              as time
-         ) step_32_times_part_1_close_cast_as_time
+                   step_28_times_part_1_close_with_new_colon
+                   as time
+                  ) step_32_times_part_1_close_cast_as_time
 from     step_31
 ),
 
@@ -417,9 +417,9 @@ step_33 as
 (
 select   *,
          safe_cast(
-              step_29_times_part_2_open_with_new_colon
-              as time
-         ) step_33_times_part_2_open_cast_as_time
+                   step_29_times_part_2_open_with_new_colon
+                   as time
+                  ) step_33_times_part_2_open_cast_as_time
 from     step_32
 ),
 
@@ -427,9 +427,9 @@ step_34 as
 (
 select   *,
          safe_cast(
-              step_30_times_part_2_close_with_new_colon
-              as time
-         ) step_34_times_part_2_close_cast_as_time
+                   step_30_times_part_2_close_with_new_colon
+                   as time
+                  ) step_34_times_part_2_close_cast_as_time
 from     step_33
 )
 
