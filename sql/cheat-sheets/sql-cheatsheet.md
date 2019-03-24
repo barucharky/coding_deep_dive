@@ -37,7 +37,7 @@ substr(
 strpos(
        field_name,    -- parameter 1: string we're searching in
        'abc'          -- find the position of these characters
-)
+      )
 ```
 
 ## `replace`
@@ -48,7 +48,7 @@ replace(
         field_name,   -- string we're working with
         'abc',        -- characters to replace
         'xyz'         -- characters to replace with
-)
+       )
 ```
 
 ---
@@ -77,7 +77,7 @@ end char2_desc
 safe_cast(
           expr          -- the field you want to convert
           as typename   -- the type you want to convert to (int64, numeric, string, date, etc)
-)
+         )
 ```
 
 ---

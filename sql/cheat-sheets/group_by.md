@@ -144,7 +144,14 @@ having   sum(cost) > 1000
 
 ```sql
 
-group by campaign 
+select   campaign,
+         sum(cost)               sum_cost_per_campaign,
+         avg(cost)               avg_cost_per_campaign,
+         sum(impressions)        sum_impressions_per_campaign,
+         -- ------------------------------------------------------
+         count(*)                number_of_records,
+         count(account)          number_of_accounts, -- just use count(*) if you want number of records
+         count(distinct account) number_of_distinct_accounts
 
 ```
 
