@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="32" Full="1.12.32"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2019-03-24T23:19:19Z</dc:date>
+      <meta:creation-date>2019-03-24T23:18:12Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet1</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet2</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet3</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="1366" Height="509"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet1</gnm:Name>
+      <gnm:MaxCol>36</gnm:MaxCol>
+      <gnm:MaxRow>31</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet1&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>iso_a4</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="29" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="1" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="30" startRow="0" endCol="30" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="31" startRow="0" endCol="36" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="37" startRow="0" endCol="255" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">field_6</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">step_00_mon_fri_flag</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">step_01_remove_mon_fri</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">step_02_str_pos_of_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">step_03_str_up_to_first_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="60">step_04_str_up_to_first_colon_as_int64</gnm:Cell>
+        <gnm:Cell Row="0" Col="6" ValueType="60">step_05_times_prefix</gnm:Cell>
+        <gnm:Cell Row="0" Col="7" ValueType="60">step_06_remove_times_prefix</gnm:Cell>
+        <gnm:Cell Row="0" Col="8" ValueType="60">step_07_replace_blank_dash_blank</gnm:Cell>
+        <gnm:Cell Row="0" Col="9" ValueType="60">step_08_str_pos_of_colon_zero_zero_blank</gnm:Cell>
+        <gnm:Cell Row="0" Col="10" ValueType="60">step_09_times_suffix</gnm:Cell>
+        <gnm:Cell Row="0" Col="11" ValueType="60">step_10_remove_times_suffix</gnm:Cell>
+        <gnm:Cell Row="0" Col="12" ValueType="60">step_11_remove_colons</gnm:Cell>
+        <gnm:Cell Row="0" Col="13" ValueType="60">step_12_str_pos_of_slash</gnm:Cell>
+        <gnm:Cell Row="0" Col="14" ValueType="60">step_13_times_part_1</gnm:Cell>
+        <gnm:Cell Row="0" Col="15" ValueType="60">step_14_times_part_2</gnm:Cell>
+        <gnm:Cell Row="0" Col="16" ValueType="60">step_15_times_part_1_open</gnm:Cell>
+        <gnm:Cell Row="0" Col="17" ValueType="60">step_16_times_part_1_close</gnm:Cell>
+        <gnm:Cell Row="0" Col="18" ValueType="60">step_17_times_part_2_open</gnm:Cell>
+        <gnm:Cell Row="0" Col="19" ValueType="60">step_18_times_part_2_close</gnm:Cell>
+        <gnm:Cell Row="0" Col="20" ValueType="60">step_19_times_part_1_open_add_00</gnm:Cell>
+        <gnm:Cell Row="0" Col="21" ValueType="60">step_20_times_part_1_close_add_00</gnm:Cell>
+        <gnm:Cell Row="0" Col="22" ValueType="60">step_21_times_part_2_open_add_00</gnm:Cell>
+        <gnm:Cell Row="0" Col="23" ValueType="60">step_22_times_part_2_close_add_00</gnm:Cell>
+        <gnm:Cell Row="0" Col="24" ValueType="60">step_23_times_part_1_open_str_pos_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="25" ValueType="60">step_24_times_part_1_close_str_pos_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="26" ValueType="60">step_25_times_part_2_open_str_pos_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="27" ValueType="60">step_26_times_part_2_close_str_pos_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="28" ValueType="60">step_27_times_part_1_open_with_new_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="29" ValueType="60">step_28_times_part_1_close_with_new_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="31" ValueType="60">step_29_times_part_2_open_with_new_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="32" ValueType="60">step_30_times_part_2_close_with_new_colon</gnm:Cell>
+        <gnm:Cell Row="0" Col="33" ValueType="60">step_31_times_part_1_open_cast_as_time</gnm:Cell>
+        <gnm:Cell Row="0" Col="34" ValueType="60">step_32_times_part_1_close_cast_as_time</gnm:Cell>
+        <gnm:Cell Row="0" Col="35" ValueType="60">step_33_times_part_2_open_cast_as_time</gnm:Cell>
+        <gnm:Cell Row="0" Col="36" ValueType="60">step_34_times_part_2_close_cast_as_time</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">09:30 - 15:00 HKT</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="60">09:30 - 15:00 HKT</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="1" Col="4" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="1" Col="5" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="1" Col="7" ValueType="60">09:30 - 15:00 HKT</gnm:Cell>
+        <gnm:Cell Row="1" Col="8" ValueType="60">09:30-15:00 HKT</gnm:Cell>
+        <gnm:Cell Row="1" Col="9" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="1" Col="10" ValueType="60">HKT</gnm:Cell>
+        <gnm:Cell Row="1" Col="11" ValueType="60">09:30-15:00</gnm:Cell>
+        <gnm:Cell Row="1" Col="12" ValueType="60">0930-1500</gnm:Cell>
+        <gnm:Cell Row="1" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="1" Col="14" ValueType="60">0930-1500</gnm:Cell>
+        <gnm:Cell Row="1" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="1" Col="17" ValueType="40">1500</gnm:Cell>
+        <gnm:Cell Row="1" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="1" Col="21" ValueType="40" ValueFormat="[h]:mm">62.5</gnm:Cell>
+        <gnm:Cell Row="1" Col="24" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="1" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="1" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="1" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.625</gnm:Cell>
+        <gnm:Cell Row="1" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="1" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.625</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">10:00 - 16:00 Sydney Time</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="60">10:00 - 16:00 Sydney Time</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="2" Col="4" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="2" Col="5" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="2" Col="7" ValueType="60">10:00 - 16:00 Sydney Time</gnm:Cell>
+        <gnm:Cell Row="2" Col="8" ValueType="60">10:00-16:00 Sydney Time</gnm:Cell>
+        <gnm:Cell Row="2" Col="9" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="2" Col="10" ValueType="60">Sydney Time</gnm:Cell>
+        <gnm:Cell Row="2" Col="11" ValueType="60">10:00-16:00</gnm:Cell>
+        <gnm:Cell Row="2" Col="12" ValueType="60">1000-1600</gnm:Cell>
+        <gnm:Cell Row="2" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="2" Col="14" ValueType="60">1000-1600</gnm:Cell>
+        <gnm:Cell Row="2" Col="16" ValueType="40">1000</gnm:Cell>
+        <gnm:Cell Row="2" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="2" Col="20" ValueType="40" ValueFormat="[h]:mm">41.666666666666664</gnm:Cell>
+        <gnm:Cell Row="2" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="2" Col="24" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="2" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="2" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.41666666666666669</gnm:Cell>
+        <gnm:Cell Row="2" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="2" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.41666666666666669</gnm:Cell>
+        <gnm:Cell Row="2" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">8:00 - 17:00 ET</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="60">8:00 - 17:00 ET</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="3" Col="4" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="3" Col="5" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="3" Col="7" ValueType="60">8:00 - 17:00 ET</gnm:Cell>
+        <gnm:Cell Row="3" Col="8" ValueType="60">8:00-17:00 ET</gnm:Cell>
+        <gnm:Cell Row="3" Col="9" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="3" Col="10" ValueType="60">ET</gnm:Cell>
+        <gnm:Cell Row="3" Col="11" ValueType="60">8:00-17:00</gnm:Cell>
+        <gnm:Cell Row="3" Col="12" ValueType="60">800-1700</gnm:Cell>
+        <gnm:Cell Row="3" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="3" Col="14" ValueType="60">800-1700</gnm:Cell>
+        <gnm:Cell Row="3" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="3" Col="17" ValueType="40">1700</gnm:Cell>
+        <gnm:Cell Row="3" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="3" Col="21" ValueType="40" ValueFormat="[h]:mm">70.833333333333329</gnm:Cell>
+        <gnm:Cell Row="3" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="3" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="3" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="3" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="3" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="3" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">9:30 - 16:00 (ET)</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="60">9:30 - 16:00 (ET)</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="4" Col="4" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="4" Col="5" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="4" Col="7" ValueType="60">9:30 - 16:00 (ET)</gnm:Cell>
+        <gnm:Cell Row="4" Col="8" ValueType="60">9:30-16:00 (ET)</gnm:Cell>
+        <gnm:Cell Row="4" Col="9" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="4" Col="10" ValueType="60">(ET)</gnm:Cell>
+        <gnm:Cell Row="4" Col="11" ValueType="60">9:30-16:00</gnm:Cell>
+        <gnm:Cell Row="4" Col="12" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="4" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="4" Col="14" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="4" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="4" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="4" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="4" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="4" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="4" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="4" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="4" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="4" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="4" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="60">9:30 - 16:00 ET</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="60">9:30 - 16:00 ET</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="5" Col="4" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="5" Col="5" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="5" Col="7" ValueType="60">9:30 - 16:00 ET</gnm:Cell>
+        <gnm:Cell Row="5" Col="8" ValueType="60">9:30-16:00 ET</gnm:Cell>
+        <gnm:Cell Row="5" Col="9" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="5" Col="10" ValueType="60">ET</gnm:Cell>
+        <gnm:Cell Row="5" Col="11" ValueType="60">9:30-16:00</gnm:Cell>
+        <gnm:Cell Row="5" Col="12" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="5" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="5" Col="14" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="5" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="5" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="5" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="5" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="5" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="5" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="5" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="5" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="5" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="5" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="60">9:30 - 17:00 ET</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="60">9:30 - 17:00 ET</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="6" Col="4" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="6" Col="5" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="6" Col="7" ValueType="60">9:30 - 17:00 ET</gnm:Cell>
+        <gnm:Cell Row="6" Col="8" ValueType="60">9:30-17:00 ET</gnm:Cell>
+        <gnm:Cell Row="6" Col="9" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="6" Col="10" ValueType="60">ET</gnm:Cell>
+        <gnm:Cell Row="6" Col="11" ValueType="60">9:30-17:00</gnm:Cell>
+        <gnm:Cell Row="6" Col="12" ValueType="60">930-1700</gnm:Cell>
+        <gnm:Cell Row="6" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="6" Col="14" ValueType="60">930-1700</gnm:Cell>
+        <gnm:Cell Row="6" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="6" Col="17" ValueType="40">1700</gnm:Cell>
+        <gnm:Cell Row="6" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="6" Col="21" ValueType="40" ValueFormat="[h]:mm">70.833333333333329</gnm:Cell>
+        <gnm:Cell Row="6" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="6" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="6" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="6" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="6" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="6" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="7" Col="0" ValueType="60">9:30-16:00 ET</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="60">9:30-16:00 ET</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="7" Col="4" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="7" Col="5" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="7" Col="7" ValueType="60">9:30-16:00 ET</gnm:Cell>
+        <gnm:Cell Row="7" Col="8" ValueType="60">9:30-16:00 ET</gnm:Cell>
+        <gnm:Cell Row="7" Col="9" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="7" Col="10" ValueType="60">ET</gnm:Cell>
+        <gnm:Cell Row="7" Col="11" ValueType="60">9:30-16:00</gnm:Cell>
+        <gnm:Cell Row="7" Col="12" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="7" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="7" Col="14" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="7" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="7" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="7" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="7" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="7" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="7" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="7" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="7" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="7" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="7" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="8" Col="0" ValueType="60">Monday - Friday: 1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="60">1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="8" Col="7" ValueType="60">1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="8" ValueType="60">1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="8" Col="11" ValueType="60">1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="12" ValueType="60">1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="8" Col="14" ValueType="60">1000-1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="16" ValueType="40">1000</gnm:Cell>
+        <gnm:Cell Row="8" Col="17" ValueType="40">1700</gnm:Cell>
+        <gnm:Cell Row="8" Col="20" ValueType="40" ValueFormat="[h]:mm">41.666666666666664</gnm:Cell>
+        <gnm:Cell Row="8" Col="21" ValueType="40" ValueFormat="[h]:mm">70.833333333333329</gnm:Cell>
+        <gnm:Cell Row="8" Col="24" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="8" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="8" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.41666666666666669</gnm:Cell>
+        <gnm:Cell Row="8" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="8" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.41666666666666669</gnm:Cell>
+        <gnm:Cell Row="8" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="9" Col="0" ValueType="60">Monday - Friday: 400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="60">400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="9" Col="7" ValueType="60">400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="8" ValueType="60">400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="9" Col="11" ValueType="60">400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="12" ValueType="60">400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="9" Col="14" ValueType="60">400-2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="16" ValueType="40">400</gnm:Cell>
+        <gnm:Cell Row="9" Col="17" ValueType="40">2000</gnm:Cell>
+        <gnm:Cell Row="9" Col="20" ValueType="40" ValueFormat="[h]:mm">16.666666666666668</gnm:Cell>
+        <gnm:Cell Row="9" Col="21" ValueType="40" ValueFormat="[h]:mm">83.333333333333329</gnm:Cell>
+        <gnm:Cell Row="9" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="9" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="9" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.16666666666666666</gnm:Cell>
+        <gnm:Cell Row="9" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.83333333333333337</gnm:Cell>
+        <gnm:Cell Row="9" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.16666666666666666</gnm:Cell>
+        <gnm:Cell Row="9" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.83333333333333337</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="60">Monday - Friday: 800 - 1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="60">800 - 1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="10" Col="7" ValueType="60">800 - 1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="8" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="10" Col="11" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="12" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="10" Col="14" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="10" Col="17" ValueType="40">1630</gnm:Cell>
+        <gnm:Cell Row="10" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="10" Col="21" ValueType="40" ValueFormat="[h]:mm">67.916666666666671</gnm:Cell>
+        <gnm:Cell Row="10" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="10" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="10" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="10" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.6875</gnm:Cell>
+        <gnm:Cell Row="10" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="10" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.6875</gnm:Cell>
+        <gnm:Cell Row="11" Col="0" ValueType="60">Monday - Friday: 800 - 1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="11" Col="2" ValueType="60">800 - 1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="11" Col="7" ValueType="60">800 - 1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="8" ValueType="60">800-1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="11" Col="11" ValueType="60">800-1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="12" ValueType="60">800-1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="11" Col="14" ValueType="60">800-1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="11" Col="17" ValueType="40">1700</gnm:Cell>
+        <gnm:Cell Row="11" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="11" Col="21" ValueType="40" ValueFormat="[h]:mm">70.833333333333329</gnm:Cell>
+        <gnm:Cell Row="11" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="11" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="11" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="11" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="11" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="11" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.70833333333333337</gnm:Cell>
+        <gnm:Cell Row="12" Col="0" ValueType="60">Monday - Friday: 800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="60">800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="12" Col="7" ValueType="60">800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="8" ValueType="60">800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="12" Col="11" ValueType="60">800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="12" ValueType="60">800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="12" Col="14" ValueType="60">800-1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="12" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="12" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="12" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="12" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="12" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="12" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="12" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="12" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="12" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="13" Col="0" ValueType="60">Monday - Friday: 800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="13" Col="2" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="13" Col="7" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="8" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="13" Col="11" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="12" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="13" Col="14" ValueType="60">800-1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="13" Col="17" ValueType="40">1630</gnm:Cell>
+        <gnm:Cell Row="13" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="13" Col="21" ValueType="40" ValueFormat="[h]:mm">67.916666666666671</gnm:Cell>
+        <gnm:Cell Row="13" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="13" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="13" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="13" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.6875</gnm:Cell>
+        <gnm:Cell Row="13" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="13" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.6875</gnm:Cell>
+        <gnm:Cell Row="14" Col="0" ValueType="60">Monday - Friday: 800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="60">800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="14" Col="7" ValueType="60">800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="8" ValueType="60">800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="14" Col="11" ValueType="60">800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="12" ValueType="60">800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="14" Col="14" ValueType="60">800-1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="14" Col="17" ValueType="40">1640</gnm:Cell>
+        <gnm:Cell Row="14" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="14" Col="21" ValueType="40" ValueFormat="[h]:mm">68.333333333333329</gnm:Cell>
+        <gnm:Cell Row="14" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="14" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="14" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="14" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.69444444444444442</gnm:Cell>
+        <gnm:Cell Row="14" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="14" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.69444444444444442</gnm:Cell>
+        <gnm:Cell Row="15" Col="0" ValueType="60">Monday - Friday: 800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="15" Col="2" ValueType="60">800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="15" Col="7" ValueType="60">800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="8" ValueType="60">800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="15" Col="11" ValueType="60">800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="12" ValueType="60">800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="15" Col="14" ValueType="60">800-2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="15" Col="17" ValueType="40">2000</gnm:Cell>
+        <gnm:Cell Row="15" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="15" Col="21" ValueType="40" ValueFormat="[h]:mm">83.333333333333329</gnm:Cell>
+        <gnm:Cell Row="15" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="15" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="15" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="15" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.83333333333333337</gnm:Cell>
+        <gnm:Cell Row="15" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="15" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.83333333333333337</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="60">Monday - Friday: 800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="60">800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="16" Col="7" ValueType="60">800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="8" ValueType="60">800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="16" Col="11" ValueType="60">800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="12" ValueType="60">800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="16" Col="14" ValueType="60">800-2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="16" ValueType="40">800</gnm:Cell>
+        <gnm:Cell Row="16" Col="17" ValueType="40">2200</gnm:Cell>
+        <gnm:Cell Row="16" Col="20" ValueType="40" ValueFormat="[h]:mm">33.333333333333336</gnm:Cell>
+        <gnm:Cell Row="16" Col="21" ValueType="40" ValueFormat="[h]:mm">91.666666666666671</gnm:Cell>
+        <gnm:Cell Row="16" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="16" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="16" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="16" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.91666666666666663</gnm:Cell>
+        <gnm:Cell Row="16" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.33333333333333331</gnm:Cell>
+        <gnm:Cell Row="16" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.91666666666666663</gnm:Cell>
+        <gnm:Cell Row="17" Col="0" ValueType="60">Monday - Friday: 820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="60">820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="17" Col="7" ValueType="60">820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="8" ValueType="60">820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="17" Col="11" ValueType="60">820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="12" ValueType="60">820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="17" Col="14" ValueType="60">820-1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="16" ValueType="40">820</gnm:Cell>
+        <gnm:Cell Row="17" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="17" Col="20" ValueType="40" ValueFormat="[h]:mm">34.166666666666664</gnm:Cell>
+        <gnm:Cell Row="17" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="17" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="17" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="17" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.34722222222222221</gnm:Cell>
+        <gnm:Cell Row="17" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="17" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.34722222222222221</gnm:Cell>
+        <gnm:Cell Row="17" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="60">Monday - Friday: 830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="60">830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="18" Col="7" ValueType="60">830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="8" ValueType="60">830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="18" Col="11" ValueType="60">830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="12" ValueType="60">830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="18" Col="14" ValueType="60">830-1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="16" ValueType="40">830</gnm:Cell>
+        <gnm:Cell Row="18" Col="17" ValueType="40">1500</gnm:Cell>
+        <gnm:Cell Row="18" Col="20" ValueType="40" ValueFormat="[h]:mm">34.583333333333336</gnm:Cell>
+        <gnm:Cell Row="18" Col="21" ValueType="40" ValueFormat="[h]:mm">62.5</gnm:Cell>
+        <gnm:Cell Row="18" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="18" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="18" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.35416666666666669</gnm:Cell>
+        <gnm:Cell Row="18" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.625</gnm:Cell>
+        <gnm:Cell Row="18" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.35416666666666669</gnm:Cell>
+        <gnm:Cell Row="18" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.625</gnm:Cell>
+        <gnm:Cell Row="19" Col="0" ValueType="60">Monday - Friday: 830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="60">830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="19" Col="7" ValueType="60">830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="8" ValueType="60">830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="19" Col="11" ValueType="60">830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="12" ValueType="60">830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="19" Col="14" ValueType="60">830-1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="16" ValueType="40">830</gnm:Cell>
+        <gnm:Cell Row="19" Col="17" ValueType="40">1630</gnm:Cell>
+        <gnm:Cell Row="19" Col="20" ValueType="40" ValueFormat="[h]:mm">34.583333333333336</gnm:Cell>
+        <gnm:Cell Row="19" Col="21" ValueType="40" ValueFormat="[h]:mm">67.916666666666671</gnm:Cell>
+        <gnm:Cell Row="19" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="19" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="19" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.35416666666666669</gnm:Cell>
+        <gnm:Cell Row="19" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.6875</gnm:Cell>
+        <gnm:Cell Row="19" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.35416666666666669</gnm:Cell>
+        <gnm:Cell Row="19" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.6875</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="60">Monday - Friday: 900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="60">900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="20" Col="7" ValueType="60">900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="8" ValueType="60">900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="20" Col="11" ValueType="60">900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="12" ValueType="60">900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="20" Col="14" ValueType="60">900-1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="20" Col="17" ValueType="40">1620</gnm:Cell>
+        <gnm:Cell Row="20" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="20" Col="21" ValueType="40" ValueFormat="[h]:mm">67.5</gnm:Cell>
+        <gnm:Cell Row="20" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="20" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="20" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="20" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.68055555555555558</gnm:Cell>
+        <gnm:Cell Row="20" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="20" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.68055555555555558</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="60">Monday - Friday: 900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="21" Col="2" ValueType="60">900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="21" Col="7" ValueType="60">900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="8" ValueType="60">900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="21" Col="11" ValueType="60">900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="12" ValueType="60">900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="21" Col="14" ValueType="60">900-1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="21" Col="17" ValueType="40">1730</gnm:Cell>
+        <gnm:Cell Row="21" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="21" Col="21" ValueType="40" ValueFormat="[h]:mm">72.083333333333329</gnm:Cell>
+        <gnm:Cell Row="21" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="21" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="21" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="21" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.72916666666666663</gnm:Cell>
+        <gnm:Cell Row="21" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="21" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.72916666666666663</gnm:Cell>
+        <gnm:Cell Row="22" Col="0" ValueType="60">Monday - Friday: 900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="22" Col="2" ValueType="60">900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="22" Col="7" ValueType="60">900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="8" ValueType="60">900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="22" Col="11" ValueType="60">900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="12" ValueType="60">900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="22" Col="14" ValueType="60">900-1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="22" Col="17" ValueType="40">1732</gnm:Cell>
+        <gnm:Cell Row="22" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="22" Col="21" ValueType="40" ValueFormat="[h]:mm">72.166666666666671</gnm:Cell>
+        <gnm:Cell Row="22" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="22" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="22" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="22" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.73055555555555551</gnm:Cell>
+        <gnm:Cell Row="22" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="22" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.73055555555555551</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="60">Monday - Friday: 900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="23" Col="2" ValueType="60">900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="23" Col="7" ValueType="60">900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="8" ValueType="60">900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="23" Col="11" ValueType="60">900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="12" ValueType="60">900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="23" Col="14" ValueType="60">900-1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="23" Col="17" ValueType="40">1735</gnm:Cell>
+        <gnm:Cell Row="23" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="23" Col="21" ValueType="40" ValueFormat="[h]:mm">72.291666666666671</gnm:Cell>
+        <gnm:Cell Row="23" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="23" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="23" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="23" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.73263888888888884</gnm:Cell>
+        <gnm:Cell Row="23" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="23" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.73263888888888884</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="60">Monday - Friday: 900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="24" Col="2" ValueType="60">900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="24" Col="7" ValueType="60">900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="8" ValueType="60">900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="24" Col="11" ValueType="60">900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="12" ValueType="60">900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="24" Col="14" ValueType="60">900-1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="24" Col="17" ValueType="40">1740</gnm:Cell>
+        <gnm:Cell Row="24" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="24" Col="21" ValueType="40" ValueFormat="[h]:mm">72.5</gnm:Cell>
+        <gnm:Cell Row="24" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="24" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="24" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="24" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.73611111111111116</gnm:Cell>
+        <gnm:Cell Row="24" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="24" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.73611111111111116</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="60">Monday - Friday: 900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="25" Col="2" ValueType="60">900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="25" Col="7" ValueType="60">900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="8" ValueType="60">900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="25" Col="11" ValueType="60">900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="12" ValueType="60">900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="25" Col="14" ValueType="60">900-1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="25" Col="17" ValueType="40">1742</gnm:Cell>
+        <gnm:Cell Row="25" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="25" Col="21" ValueType="40" ValueFormat="[h]:mm">72.583333333333329</gnm:Cell>
+        <gnm:Cell Row="25" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="25" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="25" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="25" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.73750000000000004</gnm:Cell>
+        <gnm:Cell Row="25" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="25" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.73750000000000004</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="60">Monday - Friday: 900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="26" Col="2" ValueType="60">900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="26" Col="7" ValueType="60">900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="8" ValueType="60">900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="26" Col="11" ValueType="60">900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="12" ValueType="60">900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="26" Col="14" ValueType="60">900-1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="26" Col="17" ValueType="40">1745</gnm:Cell>
+        <gnm:Cell Row="26" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="26" Col="21" ValueType="40" ValueFormat="[h]:mm">72.708333333333329</gnm:Cell>
+        <gnm:Cell Row="26" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="26" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="26" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="26" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.73958333333333337</gnm:Cell>
+        <gnm:Cell Row="26" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="26" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.73958333333333337</gnm:Cell>
+        <gnm:Cell Row="27" Col="0" ValueType="60">Monday - Friday: 900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="27" Col="2" ValueType="60">900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="27" Col="7" ValueType="60">900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="8" ValueType="60">900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="27" Col="11" ValueType="60">900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="12" ValueType="60">900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="27" Col="14" ValueType="60">900-2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="27" Col="17" ValueType="40">2000</gnm:Cell>
+        <gnm:Cell Row="27" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="27" Col="21" ValueType="40" ValueFormat="[h]:mm">83.333333333333329</gnm:Cell>
+        <gnm:Cell Row="27" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="27" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="27" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="27" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.83333333333333337</gnm:Cell>
+        <gnm:Cell Row="27" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="27" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.83333333333333337</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="60">Monday - Friday: 915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="28" Col="2" ValueType="60">915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="28" Col="7" ValueType="60">915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="8" ValueType="60">915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="28" Col="11" ValueType="60">915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="12" ValueType="60">915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="28" Col="14" ValueType="60">915-1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="16" ValueType="40">915</gnm:Cell>
+        <gnm:Cell Row="28" Col="17" ValueType="40">1530</gnm:Cell>
+        <gnm:Cell Row="28" Col="20" ValueType="40" ValueFormat="[h]:mm">38.125</gnm:Cell>
+        <gnm:Cell Row="28" Col="21" ValueType="40" ValueFormat="[h]:mm">63.75</gnm:Cell>
+        <gnm:Cell Row="28" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="28" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="28" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.38541666666666669</gnm:Cell>
+        <gnm:Cell Row="28" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.64583333333333337</gnm:Cell>
+        <gnm:Cell Row="28" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.38541666666666669</gnm:Cell>
+        <gnm:Cell Row="28" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.64583333333333337</gnm:Cell>
+        <gnm:Cell Row="29" Col="0" ValueType="60">Monday - Friday: 930 - 1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="29" Col="2" ValueType="60">930 - 1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="29" Col="7" ValueType="60">930 - 1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="8" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="29" Col="11" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="12" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="29" Col="14" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="29" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="29" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="29" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="29" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="29" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="29" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="29" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="29" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="29" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="60">Monday - Friday: 930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="1" ValueType="60">Y</gnm:Cell>
+        <gnm:Cell Row="30" Col="2" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="3" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="30" Col="7" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="8" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="9" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="30" Col="11" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="12" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="13" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="30" Col="14" ValueType="60">930-1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="16" ValueType="40">930</gnm:Cell>
+        <gnm:Cell Row="30" Col="17" ValueType="40">1600</gnm:Cell>
+        <gnm:Cell Row="30" Col="20" ValueType="40" ValueFormat="[h]:mm">38.75</gnm:Cell>
+        <gnm:Cell Row="30" Col="21" ValueType="40" ValueFormat="[h]:mm">66.666666666666671</gnm:Cell>
+        <gnm:Cell Row="30" Col="24" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="30" Col="25" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="30" Col="28" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="30" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="30" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.39583333333333331</gnm:Cell>
+        <gnm:Cell Row="30" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.66666666666666663</gnm:Cell>
+        <gnm:Cell Row="31" Col="0" ValueType="60">STK: 9:00-11:30/12:30-15:00 JST</gnm:Cell>
+        <gnm:Cell Row="31" Col="1" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="31" Col="2" ValueType="60">STK: 9:00-11:30/12:30-15:00 JST</gnm:Cell>
+        <gnm:Cell Row="31" Col="3" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="31" Col="4" ValueType="60">STK</gnm:Cell>
+        <gnm:Cell Row="31" Col="6" ValueType="60">STK</gnm:Cell>
+        <gnm:Cell Row="31" Col="7" ValueType="60">9:00-11:30/12:30-15:00 JST</gnm:Cell>
+        <gnm:Cell Row="31" Col="8" ValueType="60">9:00-11:30/12:30-15:00 JST</gnm:Cell>
+        <gnm:Cell Row="31" Col="9" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="31" Col="10" ValueType="60">JST</gnm:Cell>
+        <gnm:Cell Row="31" Col="11" ValueType="60">9:00-11:30/12:30-15:00</gnm:Cell>
+        <gnm:Cell Row="31" Col="12" ValueType="60">900-1130/1230-1500</gnm:Cell>
+        <gnm:Cell Row="31" Col="13" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="31" Col="14" ValueType="60">900-1130</gnm:Cell>
+        <gnm:Cell Row="31" Col="15" ValueType="60">1230-1500</gnm:Cell>
+        <gnm:Cell Row="31" Col="16" ValueType="40">900</gnm:Cell>
+        <gnm:Cell Row="31" Col="17" ValueType="40">1130</gnm:Cell>
+        <gnm:Cell Row="31" Col="18" ValueType="40">1230</gnm:Cell>
+        <gnm:Cell Row="31" Col="19" ValueType="40">1500</gnm:Cell>
+        <gnm:Cell Row="31" Col="20" ValueType="40" ValueFormat="[h]:mm">37.5</gnm:Cell>
+        <gnm:Cell Row="31" Col="21" ValueType="40" ValueFormat="[h]:mm">47.083333333333336</gnm:Cell>
+        <gnm:Cell Row="31" Col="23" ValueType="40" ValueFormat="[h]:mm">51.25</gnm:Cell>
+        <gnm:Cell Row="31" Col="24" ValueType="40" ValueFormat="[h]:mm">62.5</gnm:Cell>
+        <gnm:Cell Row="31" Col="25" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="31" Col="26" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="31" Col="27" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="31" Col="28" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="31" Col="29" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="31" Col="30" ValueType="40" ValueFormat="h:mm:ss">0.47916666666666669</gnm:Cell>
+        <gnm:Cell Row="31" Col="31" ValueType="40" ValueFormat="h:mm:ss">0.52083333333333337</gnm:Cell>
+        <gnm:Cell Row="31" Col="32" ValueType="40" ValueFormat="h:mm:ss">0.625</gnm:Cell>
+        <gnm:Cell Row="31" Col="33" ValueType="40" ValueFormat="h:mm:ss">0.375</gnm:Cell>
+        <gnm:Cell Row="31" Col="34" ValueType="40" ValueFormat="h:mm:ss">0.47916666666666669</gnm:Cell>
+        <gnm:Cell Row="31" Col="35" ValueType="40" ValueFormat="h:mm:ss">0.52083333333333337</gnm:Cell>
+        <gnm:Cell Row="31" Col="36" ValueType="40" ValueFormat="h:mm:ss">0.625</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet2</gnm:Name>
+      <gnm:MaxCol>-1</gnm:MaxCol>
+      <gnm:MaxRow>-1</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet2&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>iso_a4</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet3</gnm:Name>
+      <gnm:MaxCol>-1</gnm:MaxCol>
+      <gnm:MaxRow>-1</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet3&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>iso_a4</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="0"/>
+</gnm:Workbook>
