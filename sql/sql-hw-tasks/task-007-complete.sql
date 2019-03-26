@@ -74,10 +74,13 @@ from     step_04
 step_06 as
 (
 select   *,
-         replace(step_01_remove_mon_fri,              -- Sruli put a case statement here, testing if `step_01_remove_mon_fri` is null
-                 concat(step_05_times_prefix, ': '),  -- It's safer and could prevent errors
-                 ''                                   -- he also put all this in trim, but don't think I had extra spaces here
-                ) step_06_remove_times_prefix
+         case when step_05_times_prefix is not null
+         then replace(step_01_remove_mon_fri,            
+                      concat(step_05_times_prefix, ': '),
+                      ''                                 
+                     )
+         else step_01_remove_mon_fri 
+         end step_06_remove_times_prefix
 from     step_05
 ),
 
