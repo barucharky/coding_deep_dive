@@ -74,7 +74,7 @@ from     stg_06
 stg_08 as
 (
 select   *,
-         replace(step_06_remove_times_prefix, ' - ', '-') step_07_replace_blank_dash_blank
+         trim(replace(step_06_remove_times_prefix, ' - ', '-')) step_07_replace_blank_dash_blank
 from     stg_07
 ),
 
@@ -93,7 +93,45 @@ select   *,
               else null
          end step_09_times_suffix
 from     stg_09
+),
+
+stg_11 as
+(
+select   *,
+         case when step_09_times_suffix is not null
+              then trim(replace(step_07_replace_blank_dash_blank, step_09_times_suffix, ''))
+              else step_07_replace_blank_dash_blank
+         end step_10_remove_times_suffix
+from     stg_10
+),
+
+stg_12 as
+(
+select   *,
+         trim(replace(step_10_remove_times_suffix, ':', '')) step_11_remove_colons
+from     stg_11
+),
+
+stg_13 as
+(
+select   *,
+         strpos(step_11_remove_colons, '/') step_12_str_pos_of_slash
+from     stg_12
+),
+
+stg_14 as
+(
+select   *,
+         case when step_12_str_pos_of_slash > 0
+              then substr(step_11_remove_colons, 1, step_12_str_pos_of_slash - 1)
+              else step_11_remove_colons
+         end step_13_times_part_1,
+         case when step_12_str_pos_of_slash > 0
+              then substr(step_11_remove_colons, step_12_str_pos_of_slash + 1)
+              else null
+         end step_14_times_part_2
+from     stg_13
 )
 
 select   *
-from     stg_10
+from     stg_
