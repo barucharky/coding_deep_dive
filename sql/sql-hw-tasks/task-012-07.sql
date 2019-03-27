@@ -151,7 +151,34 @@ select   *,
               then concat(step_18_times_part_2_close, ':00')
          end step_22_times_part_2_close_add_00
 from     stg_12
+),
+
+stg_14 as
+(
+select   *,
+         strpos(step_19_times_part_1_open_add_00, ':') step_23_times_part_1_open_str_pos_colon,
+         strpos(step_20_times_part_1_close_add_00, ':') step_24_times_part_1_close_str_pos_colon,
+         strpos(step_21_times_part_2_open_add_00, ':') step_25_times_part_2_open_str_pos_colon,
+         strpos(step_22_times_part_2_close_add_00, ':') step_26_times_part_2_close_str_pos_colon
+from     stg_13
+),
+
+stg_15 as
+(
+select   *,
+         concat(substr(step_19_times_part_1_open_add_00, 1, step_23_times_part_1_open_str_pos_colon - 3), ':', substr(step_19_times_part_1_open_add_00, step_23_times_part_1_open_str_pos_colon - 2)) step_27_times_part_1_open_with_new_colon,
+         concat(substr(step_20_times_part_1_close_add_00, 1, step_24_times_part_1_close_str_pos_colon - 3), ':', substr(step_20_times_part_1_close_add_00, step_24_times_part_1_close_str_pos_colon - 2)) step_28_times_part_1_close_with_new_colon,
+         --
+         case when step_21_times_part_2_open_add_00 is not null
+              then concat(substr(step_21_times_part_2_open_add_00, 1, step_25_times_part_2_open_str_pos_colon - 3), ':', substr(step_21_times_part_2_open_add_00, step_25_times_part_2_open_str_pos_colon - 2))
+              else null
+         end step_29_times_part_2_open_with_new_colon,
+         case when step_22_times_part_2_close_add_00 is not null
+              then concat(substr(step_22_times_part_2_close_add_00, 1, step_26_times_part_2_close_str_pos_colon - 3), ':', substr(step_22_times_part_2_close_add_00, step_26_times_part_2_close_str_pos_colon - 2))
+              else null
+         end step_30_times_part_2_close_with_new_colon
+from     stg_14
 )
 
 select   *
-from     stg_13
+from     stg_15
