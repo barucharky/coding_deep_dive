@@ -126,12 +126,96 @@ select   *,
               then substr(step_11_remove_colons, 1, step_12_str_pos_of_slash - 1)
               else step_11_remove_colons
          end step_13_times_part_1,
+         --
          case when step_12_str_pos_of_slash > 0
               then substr(step_11_remove_colons, step_12_str_pos_of_slash + 1)
               else null
          end step_14_times_part_2
+         --
 from     stg_13
+),
+
+stg_15 as
+(
+select   *,
+         substr(step_13_times_part_1, 1, strpos(step_13_times_part_1, '-') - 1) step_15_times_part_1_open,
+         substr(step_13_times_part_1, strpos(step_13_times_part_1, '-') + 1) step_16_times_part_1_close,
+         --
+         case when step_14_times_part_2 is not null
+              then substr(step_14_times_part_2, 1, strpos(step_14_times_part_2, '-') - 1)
+              else null
+         end step_17_times_part_2_open,
+         --
+         case when step_14_times_part_2 is not null
+              then substr(step_14_times_part_2, strpos(step_14_times_part_2, '-') + 1)
+              else null
+         end step_18_times_part_2_close
+from     stg_14
+),
+
+stg_16 as
+(
+select   *,
+         concat(step_15_times_part_1_open, ':00') step_19_times_part_1_open_add_00,
+         concat(step_16_times_part_1_close, ':00') step_20_times_part_1_close_add_00,
+         --
+         case when step_17_times_part_2_open is not null
+              then concat(step_17_times_part_2_open, ':00')
+              else null
+         end step_21_times_part_2_open_add_00,
+         --
+         case when step_18_times_part_2_close is not null
+              then concat(step_18_times_part_2_close, ':00')
+              else null
+         end step_22_times_part_2_close_add_00
+from     stg_15
+),
+
+stg_17 as
+(
+select   *,
+         strpos(step_19_times_part_1_open_add_00, ':') step_23_times_part_1_open_str_pos_colon,
+         strpos(step_20_times_part_1_close_add_00, ':') step_24_times_part_1_close_str_pos_colon,
+         --
+         case when step_21_times_part_2_open_add_00 is not null
+              then strpos(step_21_times_part_2_open_add_00, ':')
+              else null
+         end step_25_times_part_2_open_str_pos_colon,
+         --
+         case when step_22_times_part_2_close_add_00 is not null
+              then strpos(step_22_times_part_2_close_add_00, ':')
+              else null
+         end step_26_times_part_2_close_str_pos_colon
+from     stg_16
+),
+
+stg_18 as
+(
+select   *,
+         concat(substr(step_19_times_part_1_open_add_00, 1, step_23_times_part_1_open_str_pos_colon - 3), ':', substr(step_19_times_part_1_open_add_00, step_23_times_part_1_open_str_pos_colon - 2)) step_27_times_part_1_open_with_new_colon,
+         concat(substr(step_20_times_part_1_close_add_00, 1, step_24_times_part_1_close_str_pos_colon - 3), ':', substr(step_20_times_part_1_close_add_00, step_24_times_part_1_close_str_pos_colon - 2)) step_28_times_part_1_close_with_new_colon,
+         --
+         case when step_21_times_part_2_open_add_00 is not null
+              then concat(substr(step_21_times_part_2_open_add_00, 1, step_25_times_part_2_open_str_pos_colon - 3), ':', substr(step_21_times_part_2_open_add_00, step_25_times_part_2_open_str_pos_colon - 2))
+              else null
+         end step_29_times_part_2_open_with_new_colon,
+         --
+         case when step_22_times_part_2_close_add_00 is not null
+              then concat(substr(step_22_times_part_2_close_add_00, 1, step_26_times_part_2_close_str_pos_colon - 3), ':', substr(step_22_times_part_2_close_add_00, step_26_times_part_2_close_str_pos_colon - 2))
+              else null
+         end step_30_times_part_2_close_with_new_colon
+from     stg_17
+),
+
+stg_19 as
+(
+select   *,
+         safe_cast(step_27_times_part_1_open_with_new_colon as time) step_31_times_part_1_open_cast_as_time,
+         safe_cast(step_28_times_part_1_close_with_new_colon as time) step_32_times_part_1_close_cast_as_time,
+         safe_cast(step_29_times_part_2_open_with_new_colon as time) step_33_times_part_2_open_cast_as_time,
+         safe_cast(step_30_times_part_2_close_with_new_colon as time) step_34_times_part_2_close_cast_as_time
+from     stg_18
 )
 
 select   *
-from     stg_
+from     stg_19
