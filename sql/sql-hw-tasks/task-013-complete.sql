@@ -2,7 +2,7 @@
 
 select   c.county_name,
          c.fips_class_code,
-         s.state_name
+         c.state_abbreviation
          -- ------------------------------------------
 from     `data-science-course-226116.sql_lessons.join_test_counties` c
    left outer join `data-science-course-226116.sql_lessons.join_test_states` s
