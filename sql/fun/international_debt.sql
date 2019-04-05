@@ -7,13 +7,18 @@ select   debt.country_name,
          summ.currency_unit,
          debt.value,
          debt.year
+         -- -------------------------------------------------------
 from     `bigquery-public-data.world_bank_wdi.country_summary` summ
+         -- -------------------------------------------------------
    inner join `bigquery-public-data.world_bank_intl_debt.international_debt` debt
          on summ.country_code = debt.country_code
+         -- -------------------------------------------------------
 where    summ.region not like ''
   and    debt.value > 0
   and    debt.year = 2018
+         -- -------------------------------------------------------
 order by debt.value desc
+         -- -------------------------------------------------------
 limit    10
 
 
