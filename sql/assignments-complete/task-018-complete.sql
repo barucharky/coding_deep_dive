@@ -10,15 +10,15 @@ select   year,
 from     `bigquery-public-data.usa_names.usa_1910_current`
 where    lower(name) in ('mendy', 'mendi', 'mendel', 'menachem')
   and    gender = 'M'
-),
+)
 
-numbers as
+, numbers as
 (
 select   year,
          number_of_names,
          sum(number_of_names) over(
            rows between unbounded preceding and current row
-         ) cumalitive_number_of_names,
+         ) cumulative_number_of_names,
          sum(number) over() total_number_of_names
 from     year_names
 )
