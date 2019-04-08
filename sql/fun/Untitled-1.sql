@@ -24,7 +24,7 @@ select   *,
          sum(number_of_names) over() total_number_of_names,
          -- -------------------------------
          round(
-             (number_of_names/sum(number_of_names)) * 100,
+             (number_of_names/sum(number_of_names) over()) * 100,
              2
          ) year_pct_from_total
          -- -------------------------------
