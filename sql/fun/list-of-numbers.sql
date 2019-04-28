@@ -20,3 +20,4 @@ select   d3.digit * 100 + d2.digit * 10 + d1.digit + 1 numbers
 from     digits d1
  cross join digits d2
  cross join digits d3
+order by 1
