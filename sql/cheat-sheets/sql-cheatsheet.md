@@ -88,7 +88,7 @@ safe_cast(
 ```sql
 select   *
 from     customers
-where    country is 'Mexico'
+where    country like 'Mexico'
 ```
 
 ---
