@@ -10,7 +10,7 @@ select   *,
          -- ---------------------------------------------
          to_hex(
              sha512(
-                 'ongoing mandated class one recall'
+                 cat(classification, voluntary_mandated, status)
              )
          )
          -- ---------------------------------------------
