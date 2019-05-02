@@ -15,7 +15,8 @@ task-021b.sql
 task-021c.sql
 - **2** separate ***meaningful*** queries utilizing the **`SHA_512`** function 
 task-021d.sql
-- **2** separate ***meaningful*** queries utilizing **`INNER JOIN`**  
+- **2** separate ***meaningful*** queries utilizing **`INNER JOIN`** 
+ task-021e.sql
 - **2** separate ***meaningful*** queries utilizing **`LEFT OUTER JOIN`**
 - **2** separate ***meaningful*** queries utilizing **`CROSS JOIN`**
 - **1** ***meaningful*** query utilizing the **`sum(...) over (...)`** window function

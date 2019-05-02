@@ -1,14 +1,8 @@
 --B''H--
 
--- Here are some queries I think may lead to interesting ideas
-
-select   description,
-         count(*)
-         -- --------------------------------------
-from     `bigquery-public-data.austin_crime.crime`
-         -- --------------------------------------
-group by description
-order by 2 desc
+/* left outer join `bigquery-public-data.noaa_severe_storms.hail_reports`
+with `bigquery-public-data.noaa_severe_storms.wind_reports`
+see if hail was reported with a wind report */
 
 -- percentage of arrests for particular crimes
 
