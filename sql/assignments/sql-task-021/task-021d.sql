@@ -10,7 +10,10 @@ select   *,
          -- ---------------------------------------------
          to_hex(
              sha512(
-                 cat(classification, voluntary_mandated, status)
+                 cat(coalesce(classification, '<classification field>')
+                     coalesce(voluntary_mandated, '<voluntary_mandated field>')
+                     coalesce(status, '<status field>')
+                 )
              )
          )
          -- ---------------------------------------------
