@@ -25,6 +25,22 @@ where    lower(classification)     like 'class i'
          -- ---------------------------------------------
 order by 1
 
+/*Maybe it's more usefull just to do this. My intention with the above query is that only
+records that match the `where` clause will have hashes*/
+
+select   *,
+         -- ---------------------------------------------
+         to_hex(
+             sha512(
+                 cat(coalesce(classification, '<classification field>')
+                     coalesce(voluntary_mandated, '<voluntary_mandated field>')
+                     coalesce(status, '<status field>')
+                 )
+             )
+         )
+         -- ---------------------------------------------
+from     `bigquery-public-data.fda_food.food_enforcement` 
+
 /*
 Salting passwords. The following list of passwords are hashed and then salted for further
 security.
