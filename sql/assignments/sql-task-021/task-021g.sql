@@ -61,14 +61,14 @@ from     kids
 -- I can't figure out a way to get rid of duplicates. Maybe this isn't a case for a cross join
 
 with
-stuff as
+ice_cream as
 (
-select   'lettuce' topping union all
-select   'tomato' topping union all
-select   'cheese' topping union all
-select   'onion' topping union all
-select   'mustard' topping union all
-select   null topping
+select   'fudge'         topping union all
+select   'caramel'       topping union all
+select   'nuts'          topping union all
+select   'sprinkles'     topping union all
+select   'whipped cream' topping union all
+select   null            topping
 ),
 
 combos as
@@ -79,11 +79,11 @@ select   distinct
          s3.topping s3_topping,
          s4.topping s4_topping,
          s5.topping s5_topping
-from     stuff s1
-   cross join stuff s2
-   cross join stuff s3
-   cross join stuff s4
-   cross join stuff s5
+from     ice_cream s1
+   cross join ice_cream s2
+   cross join ice_cream s3
+   cross join ice_cream s4
+   cross join ice_cream s5
 )
 
 select   *
