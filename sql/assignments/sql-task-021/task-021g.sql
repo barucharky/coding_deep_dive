@@ -99,8 +99,10 @@ from     toppings s1
 
 
 /* 
+__________________________________________________________________________________________
 since each customer must have 5 toppings at this point (including nulls and duplicates)
 and they must be listed vertically (pivoted) each topping in a set (id) will have a number
+__________________________________________________________________________________________
 */
 sets as
 (
@@ -133,6 +135,7 @@ from     combos
 
 
 /*
+______________________________________________________________________________________
 here they are grouped by id and aggragated by distinct topping_value which is ordered.
 this means that now, both ('fudge', 'fudge') and ('fudge', null) and (null, 'fudge')
 will all become 'fudge'
@@ -140,6 +143,7 @@ will all become 'fudge'
 distinct changes ('fudge', 'fudge') to 'fudge'
 order by makes ('fudge', null) and (null, 'fudge') the same
 the null is lost in aggragation
+______________________________________________________________________________________
 */
 combos_csv as
 (
@@ -156,8 +160,10 @@ group by id
 
 
 /*
+________________________________________________________________________________
 because ('fudge', 'fudge') and ('fudge', null) and (null, 'fudge') all aggragate
 to 'fudge', there are now duplicates. this is resolved by distinct
+________________________________________________________________________________
 */
 select   distinct topping_values
 from     combos_csv
