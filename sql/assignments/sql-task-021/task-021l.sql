@@ -18,5 +18,6 @@ select   timestamp,
          -- ----------------------------
          county,
          state
+         -- ----------------------------
 from     `bigquery-public-data.noaa_severe_storms.hail_reports` 
 order by 1
