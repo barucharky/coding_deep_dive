@@ -53,8 +53,9 @@ least_area as
 (
 select   big.city city,
          big.total_area / most.zip_codes area_zip
-from     most_zips_city most
-   inner join biggest_zips big
+         -- ----------------------------
+from     most_zips_city     most
+   inner join biggest_zips  big
       on most.city = big.city
 order by area_zip
 )
@@ -62,6 +63,7 @@ order by area_zip
 select   city,
          count(*) zips,
          min(area_zip) smallest_zip
+         -- ------------------------
 from     least_area
 group by city
 order by 3
