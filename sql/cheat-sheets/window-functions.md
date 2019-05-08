@@ -118,5 +118,8 @@ Gives you this table:
 |7|9|1.0|2.0|3.0|
 |8|10|1.0|2.0|3.0|
 
+---
 
-[Helpful blog about range vs rows](https://sonra.io/2017/08/22/window-function-rows-and-range-on-redshift-and-bigquery/)
+###### Links
+- [Bigquery reference for further reading](https://cloud.google.com/bigquery/docs/reference/standard-sql/analytic-function-concepts)
+- [Helpful blog about range vs rows](https://sonra.io/2017/08/22/window-function-rows-and-range-on-redshift-and-bigquery/)
