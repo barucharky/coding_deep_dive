@@ -208,6 +208,14 @@ order by 1
 
 ## Here is the query to find the ***islands***:
 
+The 'islands' here are all the consecutive years that meet our criteria of having the names we selected.
+
+Again, the first part produces that whole list of years, some of them consecutive, some of them not. 
+
+The plan here is to put all the years into groups of consecutive years. This way we can refer to a group of years and say that the lowest or minimum year in that group is the beginning of an island and the highest or maximum year is the end of that island.
+
+This means that each group of years that run consecutively must share a unique ID so that when we put that ID in our `group by` clause, we can produce the lowest and highest number in that group.
+
 ```sql
 
 with years as
@@ -222,6 +230,24 @@ where    lower(name)  in ('mendy', 'mendi', 'mendel', 'menachem')
          -- -----------------------------------------------------
 ),
 -- --------------------------------------------------------------
+```
+
+This first step after the original query gives each row a number. Now the first column will have the entire list of years and the second column will have a list of consecutive numbers. It will look like the following table only longer:
+
+|year|year_rank|
+|---|---|
+|1914|1|
+|1924|2|
+|1925|3|
+|1929|4|
+|1948|5|
+|1949|6|
+|1950|7|
+etc.
+
+Don't worry if you don't see why we did this yet. It will become more clear in the next step.
+
+```sql
 year_ranks as
 (
 select   year,
@@ -231,6 +257,25 @@ select   year,
 from     years
 ),
 -- --------------------------------------------------------------
+```
+
+Now we subtract the second column from the first column. Since the second column numbers are increasing by increments of one, consecutive years will produce the same number since they also increase by increments of one. Non-consecutive years will have a different number. Now we have an number to identify our 'island' or groups of consecutive years that meet our criteria!
+
+It will look like this:
+
+|year|year_rank|island_identifier|
+|---|---|---|
+|1914|1|1913|
+|1924|2|1922|
+|1925|3|1922|
+|1929|4|1925|
+|1948|5|1943|
+|1949|6|1943|
+|1950|7|1943|
+
+See how the consecutive years have the same island_identifier column?
+
+```sql
 island_identifiers as
 (
 select   year,
@@ -239,6 +284,13 @@ select   year,
 from     year_ranks
 )
 -- --------------------------------------------------------------
+```
+
+Now all we have to do is group all the data by that island_identifier and get the minimum and maximum value of that group.
+
+For example the years 1924 and 1925 both have the island_identifier 1922. Since they are the only years in that group, they are the minimum and maximum numbers in that group. They will be listed as the beginning and end of that island.
+
+```sql
 select   min(year) island_begining,
          max(year) island_ending
 from     island_identifiers 
@@ -256,3 +308,5 @@ order by 1
 |1929|1929|
 |1948|1961|
 |1963|2017|
+
+If you look back, you'll see that 1948 is in a group of years that have the island_identifier value of 1943. It's a big island. It goes all the way up to 1961, meaning there are consecutive years from 1948 to 1961 that meet our criteria.
