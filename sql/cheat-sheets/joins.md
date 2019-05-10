@@ -3,9 +3,9 @@
 #Joins
 ---
 
-1. INNER JOIN          80%
+### INNER JOIN          80%
 
-   - Only return the records that have a match
+   #### Only return the records that have a match
    ```sql
 
    select   emp.*,
@@ -17,7 +17,9 @@
             -- ---------------------------------------
    ```
 
-2. LEFT OUTER JOIN     16%
+---
+
+### LEFT OUTER JOIN     16%
    
    ```sql
    -- Level-of-Grain: emp.id
@@ -32,7 +34,9 @@
    order by emp.id      
    ```
 
-3. CROSS JOIN          3.9%
+---
+
+### CROSS JOIN          3.9%
    ```sql
    -- Deck of cards
    with
@@ -68,7 +72,11 @@
       cross join suit
    ```
 
-4. FULL JOIN           .1 %
+---
+
+### FULL JOIN           .1 %
 
 
-5. RIGHT OUTER JOIN    NEVER
+---
+
+### RIGHT OUTER JOIN    NEVER
