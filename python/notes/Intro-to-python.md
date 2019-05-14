@@ -8,9 +8,9 @@ In our introduction to python we learned to use jupyter lab to experiment. This 
 
 ### Getting Started
 
-Open a terminal `cd` into your `env-python-learn` folder 
+Open a terminal `cd` into your `../env-python-learn/` folder 
 
-For example, mine is located in `~/repos/coding_deep_dive/env-python-learn` 
+For example, mine is located in `~/repos/coding_deep_dive/env-python-learn/` 
 
 ##### Now type the following:
 
@@ -32,6 +32,8 @@ jupyter lab .
 
 You might only have `01-python-for-ds-ipynb`. That's fine. I made a copy so that no matter how many changes (read messes) I make, I can always go back to the original that Sruli made. This is important, because we want to treat this as a playground or sandbox. It's a place where we can try anything and we are not afraid to break things.
 
+
+###### Note: It would have been fine to `cd` directly into `../env-python-learn/notebooks/01-cheatsheets/`. The review is written this way because we may change the contents of some of those folders in the future.
 ---
 
 ### Prepare the notebook
