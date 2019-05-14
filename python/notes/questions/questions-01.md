@@ -30,6 +30,14 @@ def mk_prices():
 
 ---
 
+### Sometimes it returns lists as if I used `print()`
+
+![](images/questions-01-02.png)
+
+Doesn't seem right. Before I ran it that time, it was returning the list vertically as I would expect.
+
+---
+
 ### I don't have any idea what to do with the data sets in jupyter
 
 All I know is head and tail. I think you showed me something else, too.
