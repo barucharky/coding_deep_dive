@@ -15,7 +15,6 @@ For example, mine is located in `~/repos/coding_deep_dive/env-python-learn/`
 ##### Now type the following:
 
 ```bash
-conda activate env-py-learn
 jupyter lab .
 ```
 
