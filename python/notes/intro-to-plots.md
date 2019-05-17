@@ -48,3 +48,26 @@ Now we begin to explore what `matplotlib.pyplot` has to offer. Line plots are ma
 - `style.use()`
    - Specifies a visual style
    - In this section, four plots are produced, each with different colored lines and one with an annotation
+
+---
+
+## `regression-plots.ipynb`
+
+We learn how to make a chart with a regression line. The regression line a straight line that can run through the center of the data. It serves as a kind of prediction of the relationshipt betwen **X** and **Y**.
+
+After that, we can make 'residual' plot which basically shows how far the data is from the regression line. 
+
+##### The formula is like this:
+
+Residual = Observed value - Predicted value
+e = y - ŷ
+
+##### It looks like this:
+
+![](images/regression-01.png)
+
+### You can group several regression lines together by hue
+
+Each representing a different grouped value. This data set is about cars, so 'country of origin' is the example used.
+
+You can also give each group their own subplot. All you have to do is tell it which row or column to group by.
