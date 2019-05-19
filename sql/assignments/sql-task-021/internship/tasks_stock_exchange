@@ -1,0 +1,3 @@
+-column names
+-parse out field 6
+   if it's not a real time, make a new column that says so

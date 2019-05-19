@@ -75,6 +75,8 @@ Inside that bucket is a number or a string. If you copy one variable to another,
 
 A list variable is a bucket, too. `print()` it, and it will show you the list you assigned it, but the list is not the value that it is holding. The value it stores is an **address in the computer's memory where the list is located.**
 
+This is because a list variable is a **reference data type** and a regular variable is a **primitive data type**.
+
 ### To illustrate the point, consider the following
 
 ```python
