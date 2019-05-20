@@ -44,8 +44,8 @@ order by m2.midah, m1.midah
 )
 
 select   en.day,
-         concat(day_midah, ' shebeh ', week_midah) sefirah,
+         concat(day_midah, ' shebe', week_midah) sefirah,
          concat(he_day_midah, ' שב', he_week_midah) hebrew_sefirah
 from     sefiros en
-    full join he_sefiros he
+   inner join he_sefiros he
       on en.day = he.day
