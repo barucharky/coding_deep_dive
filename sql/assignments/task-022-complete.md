@@ -66,7 +66,7 @@ select   sum_rank,
          sum(case county when 'scott'   then three_day_sum else 0 end) scott
          -- ---------------------------------------------- 
 from     ranked_sums
+where    sum_rank <= 3
 group by sum_rank
 order by sum_rank
-limit 3
 ```
