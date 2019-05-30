@@ -37,3 +37,6 @@ sympy
 matplotlib-venn
 pyowm
 pytz
+google-cloud-bigquery
+google-cloud-storage
+pandas-gbq
