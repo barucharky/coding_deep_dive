@@ -74,7 +74,7 @@ if [ $config ]; then
     fi
 fi
 
-if [[ $srt ]]; then
+if [ $srt ]; then
     if [ -z $(cancel_conf_sub) ]; then
         sub_name="sub$(date +%M%N)"
         echo -e "1\n00:00:00,200 --> 00:00:06,600\n$srt" > $dl_dir$sub_name
@@ -82,7 +82,10 @@ if [[ $srt ]]; then
 fi
 
 if [ $urlfile ]; then
-    echo "$url" > $urlfile
+    if [ $urlfile="ytemp" ]
+        echo "$url" > $urlfile
+    fi
+    
     while read furl; do
            youtube-dl $playlist $format $furl
     done < $urlfile
