@@ -31,13 +31,13 @@ cancel_conf_sub() {
     fi;
 }
 
-while getopts 'acpmf:s:t:' flag; do
+while getopts 'acpF:f:s:t:' flag; do
     case "${flag}" in
       a) dl_dir="/home/baruch/music/"
          conf_loc="--config-location /home/baruch/.config/youtube-dl/audio-fig" ;;
       c) config=true ;;
       p) playlist="--yes-playlist" ;;
-      m) urlfile="ytemp" ;;
+      F) urlfile="ytemp" ;;
       f) folder="${OPTARG}" ;;
       s) srt="${OPTARG}" ;;
       t) tag="${OPTARG}" ;;
@@ -64,7 +64,6 @@ if [[ $srt ]]; then
 fi
 
 if [ $urlfile ]; then
-    echo "$url" > $urlfile
     while read furl; do
            youtube-dl $playlist $format $furl
     done < "$urlfile"
