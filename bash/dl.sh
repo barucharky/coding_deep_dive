@@ -68,7 +68,7 @@ if [ $urlfile ]; then
     while read furl; do
            youtube-dl $playlist $format $furl
     done < "$urlfile"
-    rm "$urlfile"
+    rm $urlfile
 else
     youtube-dl $conf_loc $playlist $format $url
     filename=$(youtube-dl --get-filename -o '%(title)s.%(ext)s' "$url")
