@@ -7,6 +7,7 @@
 url="$(xclip -o)"
 dl_dir="/home/baruch/videos/"
 conf_loc="--config-location /home/baruch/.config/youtube-dl/config"
+file_count=$(echo "$url" | wc -l)
 
 unset config_name
 unset sub_name
@@ -19,9 +20,24 @@ unset folder
 unset srt
 unset tag
 
+if [ $file_count -gt 1 ]; then
+    urlfile="ytemp"
+fi
 
 print_usage() {
-    echo "Usage:....";
+    echo "
+          Usage:
+          -a :     Extract audio, save in /home/music/
+          -c :     Create a config file
+          -p :     Download playlist
+          -f :     Specify folder name within dir
+          -F :     Specify file containing URLs
+                   If you copied multiple URLs, there is no need
+                   to use this option
+
+          -s :     Add subtitle to beginning
+          -t :     Add tag to filename
+          ";
 }
 
 cancel_conf_sub() {
@@ -31,16 +47,18 @@ cancel_conf_sub() {
     fi;
 }
 
-while getopts 'acpmf:s:t:' flag; do
+while getopts 'acpf:F:s:t:' flag; do
     case "${flag}" in
       a) dl_dir="/home/baruch/music/"
          conf_loc="--config-location /home/baruch/.config/youtube-dl/audio-fig" ;;
       c) config=true ;;
       p) playlist="--yes-playlist" ;;
-      m) urlfile="ytemp" ;;
       f) folder="${OPTARG}" ;;
+      F) urlfile="${OPTARG}" ;;
       s) srt="${OPTARG}" ;;
       t) tag="${OPTARG}" ;;
+      h) print_usage
+         exit 1 ;;
       *) print_usage
          exit 1 ;;
     esac
@@ -67,8 +85,9 @@ if [ $urlfile ]; then
     echo "$url" > $urlfile
     while read furl; do
            youtube-dl $playlist $format $furl
-    done < "$urlfile"
+    done < $urlfile
     rm $urlfile
+
 else
     youtube-dl $conf_loc $playlist $format $url
     filename=$(youtube-dl --get-filename -o '%(title)s.%(ext)s' "$url")
