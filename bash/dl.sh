@@ -82,7 +82,7 @@ if [ $srt ]; then
 fi
 
 if [ $urlfile ]; then
-    if [ $urlfile="ytemp" ]; then
+    if [ $urlfile == "ytemp" ]; then
         echo "$url" > $urlfile
     fi
     
