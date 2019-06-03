@@ -74,7 +74,7 @@ if [ $config ]; then
     fi
 fi
 
-if [ $srt ]; then
+if [ "$srt" ]; then
     if [ -z $(cancel_conf_sub) ]; then
         sub_name="sub$(date +%M%N)"
         echo -e "1\n00:00:00,200 --> 00:00:06,600\n$srt" > $dl_dir$sub_name
@@ -110,4 +110,4 @@ if [[ $sub_name ]]; then
     mv $dl_dir$sub_name $dl_dir${folder:-"new"}/"${tag:-}$(echo $(echo "${filename##*/}" | strings | head -1)).srt"
 fi
 
-kill -9 $PPID
+exit
