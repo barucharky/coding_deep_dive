@@ -20,8 +20,10 @@ unset folder
 unset srt
 unset tag
 
+
+# This should instead create a unique filename so two lists can be downloaded at once
 if [ $file_count -gt 1 ]; then
-    urlfile="ytemp"
+    urlfile="ytemp$(date +%M%N)"
 fi
 
 print_usage() {
@@ -63,6 +65,10 @@ while getopts 'acpf:F:s:t:' flag; do
          exit 1 ;;
     esac
 done;
+
+if [ $OPTIND -eq 1 ]; then
+    folder="$1"
+fi
 
 format="-o $dl_dir${folder:-"new"}/%(title)s.%(ext)s"
 
@@ -110,4 +116,7 @@ if [[ $sub_name ]]; then
     mv $dl_dir$sub_name $dl_dir${folder:-"new"}/"${tag:-}$(echo $(echo "${filename##*/}" | strings | head -1)).srt"
 fi
 
+
+# Try this maybe:
+# https://stackoverflow.com/questions/26540044/how-do-you-kill-all-child-processes-without-killing-the-parent
 exit
