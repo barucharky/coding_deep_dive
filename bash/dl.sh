@@ -88,7 +88,7 @@ if [ "$srt" ]; then
 fi
 
 if [ $urlfile ]; then
-    if [ $urlfile == "ytemp" ]; then
+    if [[ $urlfile == "ytemp"* ]]; then
         echo "$url" > $urlfile
     fi
     
@@ -108,11 +108,11 @@ fi
 # End of program cleanup
 # ###########################
 
-if [[ $config_name ]]; then
+if [ $config_name ]; then
     mv $dl_dir$config_name $dl_dir${folder:-"new"}/"${tag:-}$(echo $(echo "${filename##*/}" | strings | head -1)).conf"
 fi
 
-if [[ $sub_name ]]; then
+if [ $sub_name ]; then
     mv $dl_dir$sub_name $dl_dir${folder:-"new"}/"${tag:-}$(echo $(echo "${filename##*/}" | strings | head -1)).srt"
 fi
 
