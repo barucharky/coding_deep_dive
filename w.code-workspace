@@ -6,5 +6,8 @@
 		{
 			"path": "/home/baruch/repos/sruli_deep_dive"
 		}
-	]
+	],
+	"settings": {
+		"python.pythonPath": "/usr/bin/python"
+	}
 }

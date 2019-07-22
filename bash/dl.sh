@@ -4,6 +4,9 @@
 # https://stackoverflow.com/questions/7069682/how-to-get-arguments-with-flags-in-bash#21128172
 # That may help, but also FORMATTING
 
+# Make a log file. Get the file name with this:
+# youtube-dl [URL] | tee >(grep Destination | cut -f 3- -d ' ' > thing)
+
 url="$(xclip -o)"
 dl_dir="/home/baruch/videos/"
 conf_loc="--config-location /home/baruch/.config/youtube-dl/config"
@@ -93,7 +96,7 @@ if [ $urlfile ]; then
     fi
     
     while read furl; do
-           youtube-dl $playlist $format $furl
+           youtube-dl $conf_loc $playlist $format $furl
     done < $urlfile
     rm $urlfile
 
@@ -119,4 +122,3 @@ fi
 
 # Try this maybe:
 # https://stackoverflow.com/questions/26540044/how-do-you-kill-all-child-processes-without-killing-the-parent
-exit
