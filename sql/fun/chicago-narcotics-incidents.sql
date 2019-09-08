@@ -7,12 +7,12 @@ select   description,
          arrest,
          -- ------------------------------------------------------
          count(*) over(partition by description) num_incidents,
-         count(*) over()                         total_incidents
+         count(*) over()                         total_incidents,
          -- ------------------------------------------------------
          case arrest 
               when true
               then count(*) over(partition by description, arrest) 
-         end                                     num_arrests,
+         end                                     num_arrests
          -- ------------------------------------------------------
 from     `bigquery-public-data.chicago_crime.crime` 
          -- ------------------------------------------------------
