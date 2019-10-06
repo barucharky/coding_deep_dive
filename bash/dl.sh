@@ -34,7 +34,6 @@ print_usage() {
           Usage:
           -a :     Extract audio, save in /home/music/
           -c :     Create a config file
-          -p :     Download playlist
           -f :     Specify folder name within dir
           -F :     Specify file containing URLs
                    If you copied multiple URLs, there is no need
@@ -42,32 +41,37 @@ print_usage() {
 
           -s :     Add subtitle to beginning
           -t :     Add tag to filename
-          ";
-}
+          -p :     Download playlist
 
-cancel_conf_sub() {
-    if [ $urlfile ] || [ $audio ] || [ $playlist ]; then
-        >&2 echo "config or sub only for individual videos"
-        echo "true"
-    fi;
+          -a and -p and -F cannot be used in conjunction with -c or -s
+
+          ";
 }
 
 while getopts 'acpf:F:s:t:' flag; do
     case "${flag}" in
       a) dl_dir="/home/baruch/music/"
-         conf_loc="--config-location /home/baruch/.config/youtube-dl/audio-fig" ;;
+         conf_loc="--config-location /home/baruch/.config/youtube-dl/audio-fig" 
+         audio=true ;;
       c) config=true ;;
-      p) playlist="--yes-playlist" ;;
       f) folder="${OPTARG}" ;;
       F) urlfile="${OPTARG}" ;;
       s) srt="${OPTARG}" ;;
       t) tag="${OPTARG}" ;;
       h) print_usage
          exit 1 ;;
+      p) playlist="--yes-playlist" ;;
       *) print_usage
          exit 1 ;;
     esac
 done;
+
+if [ $urlfile ] || [ $audio ] || [ $playlist ]; then
+    if [ $config ] || [ $playlist ]; then
+         print_usage
+         exit 1
+    fi
+fi
 
 if [ $OPTIND -eq 1 ]; then
     folder="$1"
@@ -76,19 +80,17 @@ fi
 format="-o $dl_dir${folder:-"new"}/%(title)s.%(ext)s"
 
 if [ $config ]; then
-    if [ -z $(cancel_conf_sub) ]; then
-        config_name="config$(date +%M%N)"
-        echo -e "volume=\n#negative image\n#vf=eq2=1.0:-0.8\nss=" > $dl_dir$config_name
-        vim $dl_dir$config_name
-    fi
+    config_name="config$(date +%M%N)"
+    echo -e "volume=\n#negative image\n#vf=eq2=1.0:-0.8\nss=" > $dl_dir$config_name
+    vim $dl_dir$config_name
 fi
 
 if [ "$srt" ]; then
-    if [ -z $(cancel_conf_sub) ]; then
-        sub_name="sub$(date +%M%N)"
-        echo -e "1\n00:00:00,200 --> 00:00:06,600\n$srt" > $dl_dir$sub_name
-    fi
+    sub_name="sub$(date +%M%N)"
+    echo -e "1\n00:00:00,200 --> 00:00:06,600\n$srt" > $dl_dir$sub_name
 fi
+
+# If there's a URL file, download all URLs therein, otherwise download from clipboard
 
 if [ $urlfile ]; then
     if [[ $urlfile == "ytemp"* ]]; then
