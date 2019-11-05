@@ -21,7 +21,6 @@ unset playlist
 unset urlfile
 unset folder
 unset srt
-unset tag
 
 
 # This should instead create a unique filename so two lists can be downloaded at once
@@ -40,12 +39,16 @@ print_usage() {
                    to use this option
 
           -s :     Add subtitle to beginning
-          -t :     Add tag to filename
           -p :     Download playlist
 
           -a and -p and -F cannot be used in conjunction with -c or -s
 
           ";
+}
+
+get-media() {
+    filename=$(youtube-dl $conf_loc $playlist $format $url | tee /dev/stderr | grep 'Destination' | cut -d ' ' -f 3-)
+    echo -e "~--------------------~\n$(date)\n$filename\n$url" >> $dl_dir/dl-log
 }
 
 while getopts 'acpf:F:s:t:' flag; do
@@ -57,7 +60,6 @@ while getopts 'acpf:F:s:t:' flag; do
       f) folder="${OPTARG}" ;;
       F) urlfile="${OPTARG}" ;;
       s) srt="${OPTARG}" ;;
-      t) tag="${OPTARG}" ;;
       h) print_usage
          exit 1 ;;
       p) playlist="--yes-playlist" ;;
@@ -97,14 +99,13 @@ if [ $urlfile ]; then
         echo "$url" > $urlfile
     fi
     
-    while read furl; do
-           youtube-dl $conf_loc $playlist $format $furl
+    while read url; do
+           get-media
     done < $urlfile
     rm $urlfile
 
 else
-    youtube-dl $conf_loc $playlist $format $url
-    filename=$(youtube-dl --get-filename -o '%(title)s.%(ext)s' "$url")
+    get-media
 fi
 
 
@@ -114,11 +115,11 @@ fi
 # ###########################
 
 if [ $config_name ]; then
-    mv $dl_dir$config_name $dl_dir${folder:-"new"}/"${tag:-}$(echo $(echo "${filename##*/}" | strings | head -1)).conf"
+    mv $dl_dir$config_name "$filename.conf"
 fi
 
 if [ $sub_name ]; then
-    mv $dl_dir$sub_name $dl_dir${folder:-"new"}/"${tag:-}$(echo $(echo "${filename##*/}" | strings | head -1)).srt"
+    mv $dl_dir$sub_name "$filename.srt"
 fi
 
 
