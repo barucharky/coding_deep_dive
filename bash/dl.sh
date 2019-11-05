@@ -67,7 +67,7 @@ while getopts 'acpf:F:s:t:' flag; do
 done;
 
 if [ $urlfile ] || [ $audio ] || [ $playlist ]; then
-    if [ $config ] || [ $playlist ]; then
+    if [ $config ] || [ $srt ]; then
          print_usage
          exit 1
     fi
