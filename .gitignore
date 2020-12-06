@@ -1,3 +1,6 @@
 conda-test-drive/notebooks/.ipynb_checkpoints/python-test-run-checkpoint.ipynb
 env-python-learn/notebooks/01-cheatsheets/.ipynb_checkpoints/
 env-python-learn/notebooks/01-plots/.ipynb_checkpoints/
+.ipynb_checkpoints
+__pycache__
+data-hero/data/
