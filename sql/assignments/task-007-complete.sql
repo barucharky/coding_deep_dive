@@ -232,6 +232,34 @@ select   *,
 from     step_17
 ),
 
+/*
+Wouldn't this work better:
+
+with
+
+step_00 as
+(
+select   '930'  time union all
+select   '1030' time
+)
+
+select   concat(
+               substr(
+                     time,
+                     1,
+                     length(time) - 2
+                     ),
+               ':',
+               substr(
+                     time,
+                     length(time) - 1
+                     )
+               )
+from     step_00
+
+*/
+
+
 step_19 as
 (
 select   *,
