@@ -44,3 +44,19 @@ select   min(first)             first_occurance,
          sum(baruchs)           number_of_baruchs,
          string_agg(name, ', ') variations
 from     mm
+
+
+-- splitting fields
+with
+the_split as
+(
+select   split(county,  ', ') county_names,
+         zip_code
+from     `bigquery-public-data.geo_us_boundaries.zip_codes`
+where    county = "Bronx County, Kings County, New York County, Queens County, Richmond County"
+  and    zip_code = "10069"
+)
+select   county_name,
+         zip_code
+from     the_split
+cross join unnest(county_names) as county_name
